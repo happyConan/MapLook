@@ -21,7 +21,7 @@
         android:layout_width="match_parent">
 
         <RelativeLayout
-            android:id="@+id/course_layout"
+            android:id="@+id/message_layout"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_width="0dp">
@@ -33,28 +33,28 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/course_image"
+                    android:id="@+id/message_image"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:src="@mipmap/ic_launcher">
+                    android:src="@drawable/ic_tabbar_message_normal">
 
 
                 </ImageView>
 
                 <TextView
-                    android:id="@+id/course_text"
+                    android:id="@+id/message_text"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="日程"
-                    android:textColor="#7597B3">
+                    android:text="消息"
+                    android:textColor="#DDDDDD">
                 </TextView>
             </LinearLayout>
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/found_layout"
+            android:id="@+id/contacts_layout"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_width="0dp">
@@ -66,23 +66,53 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/found_image"
+                    android:id="@+id/contacts_image"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:src="@mipmap/ic_launcher">
+                    android:src="@drawable/ic_tabbar_contacts_normal">
                 </ImageView>
                 <TextView
-                    android:id="@+id/found_text"
+                    android:id="@+id/contacts_text"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="发现"
-                    android:textColor="#7597B3">
+                    android:text="好友"
+                    android:textColor="#DDDDDD">
                 </TextView>
             </LinearLayout>
         </RelativeLayout>
 
+
+        <RelativeLayout
+            android:id="@+id/discovery_layout"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/discovery_image"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_tabbar_discovery_normal">
+                </ImageView>
+                <TextView
+                    android:id="@+id/discovery_text"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="发现"
+                    android:textColor="#DDDDDD">
+                </TextView>
+            </LinearLayout>
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/setting_layout"
@@ -101,7 +131,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:src="@mipmap/ic_launcher">
+                    android:src="@drawable/ic_tabbar_setting_normal">
                 </ImageView>
                 <TextView
                     android:id="@+id/setting_text"
@@ -109,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="设置"
-                    android:textColor="#7597B3">
+                    android:textColor="#DDDDDD">
                 </TextView>
             </LinearLayout>
         </RelativeLayout>
