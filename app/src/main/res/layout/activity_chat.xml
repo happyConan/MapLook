@@ -3,10 +3,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.team.maplook.ChatActivity">
+    android:paddingLeft="5dp"
+    android:paddingBottom="5dp"
+    android:background="@drawable/ic_chat_bg_default"
+    android:layout_marginRight="5dp"
+    >
+<LinearLayout
+    android:id="@+id/id_chat_titlebar"
+    android:background="#fd0362fa"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="25sp"
+        android:textColor="#ffff"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="小明"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+<ListView
+        android:layout_marginTop="5dp"
+        android:layout_above="@+id/id_sendmsm_layout"
+        android:id="@+id/id_chat_listView"
+        android:layout_below="@+id/id_chat_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+</ListView>
+
+<RelativeLayout
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    android:id="@+id/id_sendmsm_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/id_chat_editmsg"
+        android:textSize="40sp"
+        android:background="@drawable/ic_chat_editmsg_normal"
+        android:layout_alignBottom="@+id/id_chat_send"
+        android:layout_toLeftOf="@+id/id_chat_send"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:maxLines="5" />
+    <Button
+        android:layout_gravity="top"
+        android:id="@+id/id_chat_send"
+        android:layout_alignParentRight="true"
+        android:text="发送"
+        android:layout_width="60dp"
+        android:layout_height="40dp" />
+</RelativeLayout>
+
 
 </RelativeLayout>
+<!--
+布局说明：上方titlebar为正在聊天的对象的昵称，
+         中间listview显示双方聊天内容，根据
+         消息的发送方，listview每一行分别填
+         充收发消息的聊天布局，最下方为消息输
+         入框和消息发送按钮
+-->
