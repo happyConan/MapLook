@@ -3,4 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="message_name">安卓小分队</string>
+    <string name="message_lastestcontent">大家好啊</string>
+    <string name="contacts_name">安卓小分队</string>
 </resources>

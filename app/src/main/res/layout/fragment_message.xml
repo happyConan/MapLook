@@ -1,15 +1,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#fc993d"
-    android:gravity="center"
+    android:gravity="top"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.team.maplook.MessageFragment">
 
-    <TextView
+    <ListView
+        android:id="@+id/id_message_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"></ListView>
 
 </LinearLayout>

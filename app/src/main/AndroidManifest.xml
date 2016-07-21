@@ -22,7 +22,8 @@
         <activity android:name=".ChatActivity" />
         <activity android:name=".FriendCardActivity" />
         <activity android:name=".StrangerCardActivity" />
-        <activity android:name=".AlterActivity"></activity>
+        <activity android:name=".AlterActivity" />
+        <activity android:name=".PersonalCardActivity"></activity>
     </application>
 
 </manifest>
