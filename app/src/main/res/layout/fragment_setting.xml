@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#f9ff51"
     android:gravity="center"
@@ -7,9 +8,85 @@
     android:layout_height="match_parent"
     tools:context="com.team.maplook.SettingFragment">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/basicdocument_Linear"
+            android:layout_alightParentTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/basicdocument_name"
+                android:text="基本资料"
+                android:textSize="30dp"
+                android:textColor="#598ca1"
+
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/basicdocument_photo"
+                android:src="@mipmap/ic_launcher"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chatbackground_Linear"
+            android:layout_below="@+id/basicdocument_Linear"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/chatbackground_name"
+                android:text="聊天背景"
+                android:textSize="30dp"
+                android:textColor="#598ca1"
+
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/chatbackground_photo"
+                android:src="@mipmap/ic_launcher"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exitlogin_Linear"
+            android:layout_below="@+id/chatbackground_Linear"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:id="@+id/exitlogin_name"
+                android:text="退出登录"
+                android:textSize="30dp"
+                android:textColor="#598ca1"
+
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/exitlogin_photo"
+                android:src="@mipmap/ic_launcher"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"/>
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </FrameLayout>
