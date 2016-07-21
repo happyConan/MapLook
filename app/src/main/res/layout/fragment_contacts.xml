@@ -1,15 +1,15 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#a8da12"
-    android:gravity="center"
+    android:gravity="top"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.team.maplook.ContactsFragment">
 
-    <TextView
+    <ListView
+        android:id="@+id/id_contacts_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"></ListView>
 
 </FrameLayout>
