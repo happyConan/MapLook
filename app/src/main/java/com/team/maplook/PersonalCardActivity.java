@@ -2,6 +2,7 @@ package com.team.maplook;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 public class PersonalCardActivity extends AppCompatActivity {
 
@@ -9,5 +10,6 @@ public class PersonalCardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_card);
+
     }
 }
