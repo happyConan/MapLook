@@ -1,9 +1,10 @@
 package com.team.maplook;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class AlterActivity extends AppCompatActivity {
+public class AlterActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

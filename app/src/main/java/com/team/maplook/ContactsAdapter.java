@@ -21,11 +21,10 @@ public class ContactsAdapter extends BaseAdapter {
     public ContactsAdapter(Context context) {
         layoutInflater = LayoutInflater.from(context);
         contactsMemberList = new ArrayList<>();
-        contactsMemberList.add(new ContactsMember(R.drawable.ic_tabbar_contacts_pressed,"黄景涛"));
-        contactsMemberList.add(new ContactsMember(R.drawable.ic_tabbar_contacts_normal,"苏锦萍"));
-        contactsMemberList.add(new ContactsMember(R.drawable.ic_tabbar_setting_pressed,"王飞"));
-        contactsMemberList.add(new ContactsMember(R.drawable.ic_tabbar_setting_pressed,"王刚"));
-
+        contactsMemberList.add(new ContactsMember(R.drawable.ic_hjt,"你好像很好吃"));
+        contactsMemberList.add(new ContactsMember(R.drawable.ic_sjp,"嗯哼嗯哼大王嗬嗬哈嘿"));
+        contactsMemberList.add(new ContactsMember(R.drawable.ic_wf,"子丑寅卯"));
+        contactsMemberList.add(new ContactsMember(R.drawable.ic_wg,"向前走，无所畏"));
     }
 
 

@@ -1,5 +1,6 @@
 package com.team.maplook;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,7 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-public class LoadActivity extends AppCompatActivity {
+public class LoadActivity extends Activity {
 
 
 

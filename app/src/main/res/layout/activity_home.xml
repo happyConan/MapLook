@@ -7,6 +7,20 @@
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.team.maplook.HomeActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#429A8D">
+        <TextView
+            android:id="@+id/home_title"
+            android:text="消息"
+            android:textSize="20sp"
+            android:textColor="#E57741"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <FrameLayout
         android:id="@+id/content"
@@ -16,7 +30,7 @@
     </FrameLayout>
 
     <LinearLayout
-        android:background="#FFFFFF"
+        android:background="#ffffff"
         android:layout_height="60dp"
         android:layout_width="match_parent">
 

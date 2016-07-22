@@ -26,6 +26,7 @@ public class HomeActivity extends FragmentActivity implements View.OnClickListen
     private RelativeLayout discovery_layout;
     private RelativeLayout setting_layout;
     //定义底部导航栏中的ImageView与TextView
+    private TextView home_title;
     private ImageView message_image;
     private ImageView contacts_image;
     private ImageView discovery_image;
@@ -51,6 +52,7 @@ public class HomeActivity extends FragmentActivity implements View.OnClickListen
     }
     //组件初始化
     private void initViews() {
+        home_title = (TextView) findViewById(R.id.home_title);
         message_image = (ImageView) findViewById(R.id.message_image);
         contacts_image = (ImageView) findViewById(R.id.contacts_image);
         discovery_image = (ImageView) findViewById(R.id.discovery_image);
@@ -95,6 +97,7 @@ public class HomeActivity extends FragmentActivity implements View.OnClickListen
         hideFragments(transaction);
         switch (index) {
             case 0:
+                home_title.setText("消息");
                 message_image.setImageResource(R.drawable.ic_tabbar_message_pressed);
                 message_text.setTextColor(green);
 //                message_layout.setBackgroundResource(R.mipmap.ic_launcher);
@@ -108,6 +111,7 @@ public class HomeActivity extends FragmentActivity implements View.OnClickListen
                 }
                 break;
             case 1:
+                home_title.setText("好友");
                 contacts_image.setImageResource(R.drawable.ic_tabbar_contacts_pressed);
                 contacts_text.setTextColor(green);
 //                contacts_layout.setBackgroundResource(R.mipmap.ic_launcher);
@@ -121,6 +125,7 @@ public class HomeActivity extends FragmentActivity implements View.OnClickListen
                 }
                 break;
             case 2:
+                home_title.setText("发现");
                 discovery_image.setImageResource(R.drawable.ic_tabbar_discovery_pressed);
                 discovery_text.setTextColor(green);
 //                discovery_layout.setBackgroundResource(R.mipmap.ic_launcher);
@@ -134,6 +139,7 @@ public class HomeActivity extends FragmentActivity implements View.OnClickListen
                 }
                 break;
             case 3:
+                home_title.setText("设置");
                 setting_image.setImageResource(R.drawable.ic_tabbar_setting_pressed);
                 setting_text.setTextColor(green);
                 if(settingFragment == null){

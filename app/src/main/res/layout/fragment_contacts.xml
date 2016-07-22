@@ -1,15 +1,21 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#a8da12"
     android:gravity="top"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.team.maplook.ContactsFragment">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="搜索"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/ic_contacts_search"/>
 
     <ListView
         android:id="@+id/id_contacts_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>
 
-</FrameLayout>
+</LinearLayout>

@@ -1,46 +1,55 @@
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#f9ff51"
-    android:gravity="center"
+
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.team.maplook.SettingFragment">
+    <LinearLayout
+        android:paddingTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_setting_info"
+            android:text="基本资料                                                        >"
+            android:textSize="16sp"
+            android:textColor="#598ca1"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/ic_setting_info"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_setting_chatbg"
+            android:text="聊天背景                                                        >"
+            android:textSize="16sp"
+            android:background="#ffffff"
+            android:textColor="#598ca1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_setting_chatbg"
+            />
+    </LinearLayout>
 
     <LinearLayout
+        android:paddingTop="150dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/basicdocument_name"
-            android:text="基本资料                             >"
-            android:textSize="30dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:gravity="center"
+            android:backgroundTint="#E57741"
+            android:id="@+id/btn_setting_quit"
+            android:text="退出登录                                                         "
+            android:textSize="16sp"
+            android:background="#ffffff"
             android:textColor="#598ca1"
-
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-         <TextView
-        android:id="@+id/chatbackground_name"
-        android:text="聊天背景                             >"
-        android:textSize="30dp"
-        android:textColor="#598ca1"
-
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-        <TextView
-        android:id="@+id/exitlogin_name"
-        android:text="退出登录                             >"
-        android:textSize="30dp"
-        android:textColor="#598ca1"
-
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_setting_quit"/>
 
     </LinearLayout>
 
-</FrameLayout>
+
+
+</RelativeLayout>

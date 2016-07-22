@@ -10,15 +10,13 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginLeft="10dp"
-        android:padding="6dp"
-        android:background="@mipmap/ic_launcher"/>
+        android:padding="6dp" />
 
 
     <TextView
         android:id="@+id/contacts_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/contacts_name"
         android:layout_gravity="center_vertical"
         android:padding="6dp"
         android:textSize="16sp"
