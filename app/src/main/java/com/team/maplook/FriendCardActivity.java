@@ -1,10 +1,11 @@
 package com.team.maplook;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 
-public class FriendCardActivity extends AppCompatActivity {
+public class FriendCardActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
