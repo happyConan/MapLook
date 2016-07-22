@@ -12,7 +12,7 @@
         android:background="#E57741"
         >
         <TextView
-            android:text="修改资料"
+            android:text="好友请求"
             android:textSize="20sp"
             android:textColor="#429A8D"
             android:gravity="center"
@@ -26,69 +26,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingTop="60dp">
-
         <LinearLayout
-            android:id="@+id/nickname_rel_Fri"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffffff">
-            <TextView
-                android:id="@+id/id_p_alter_name"
-                android:text="昵称"
-                android:paddingLeft="20dp"
-                android:paddingRight="90dp"
-                android:drawableLeft="@drawable/ic_card_name"
-                android:textSize="16sp"
-                android:textColor="#598ca1"
-
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <EditText
-                android:id="@+id/id_c_alter_name"
-                android:hint="你好像很好吃"
-                android:textSize="16sp"
-                android:textColor="#737070"
-
-                android:layout_alignParentRight="true"
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/personalnote_rel_Fri"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffffff">
-            <TextView
-                android:id="@+id/id_p_alter_description"
-                android:text="个人说明"
-                android:paddingLeft="20dp"
-                android:paddingRight="60dp"
-                android:textSize="16sp"
-                android:textColor="#598ca1"
-                android:gravity="center"
-                android:drawableLeft="@drawable/ic_card_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <EditText
-                android:id="@+id/id_c_alter_description"
-                android:hint="Now get out of my life"
-                android:textSize="16sp"
-                android:textColor="#737070"
-
-                android:layout_alignParentRight="true"
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/headportait_rel_Fri"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,20 +35,52 @@
             <TextView
                 android:layout_gravity="center"
                 android:paddingLeft="20dp"
-                android:paddingRight="60dp"
-                android:id="@+id/id_p_alter_pwd"
-                android:text="用户密码"
+                android:paddingRight="160dp"
+                android:id="@+id/id_p_fcard_icon"
+                android:text="头像"
                 android:textSize="16sp"
                 android:textColor="#598ca1"
-                android:drawableLeft="@drawable/ic_alter_pwd"
+                android:drawableLeft="@drawable/ic_setting_info"
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <EditText
-                android:id="@+id/id_c_alter_pwd"
-                android:hint="maplook.0512"
-                android:inputType="textPassword"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp">
+                <ImageView
+                    android:id="@+id/id_c_fcard_icon"
+                    android:background="@drawable/ic_ctl"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+            <TextView
+                android:id="@+id/id_p_fcard_name"
+                android:text="昵称"
+                android:paddingLeft="20dp"
+                android:paddingRight="200dp"
+                android:drawableLeft="@drawable/ic_card_name"
+                android:textSize="16sp"
+                android:textColor="#598ca1"
+
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/id_c_fcard_name"
+                android:text="Tinyuet"
                 android:textSize="16sp"
                 android:textColor="#737070"
                 android:layout_alignParentRight="true"
@@ -118,24 +88,62 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+            <TextView
+                android:id="@+id/id_p_fcard_description"
+                android:text="个人说明"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:textSize="16sp"
+                android:textColor="#598ca1"
+                android:gravity="center"
+                android:drawableLeft="@drawable/ic_card_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/id_c_fcard_description"
+                android:text="这个世界，还有太多的神奇，我们要一直欢笑，去发现美好。"
+                android:textSize="16sp"
+                android:paddingLeft="180dp"
+                android:textColor="#737070"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
         <LinearLayout
             android:paddingTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Button
-                android:id="@+id/btn_alter_info"
+                android:id="@+id/btn_handle_accept"
                 android:paddingLeft="20dp"
                 android:paddingRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="保存                                                               "
+                android:text="接受请求                                                       "
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_handle_accept"
+                android:textColor="#E57741"
+                android:background="#429A8D"/>
+            <Button
+                android:id="@+id/btn_handle_reject"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拒绝请求                                                       "
                 android:textSize="16sp"
                 android:drawableLeft="@drawable/ic_card_alterinfo"
                 android:textColor="#E57741"
                 android:background="#429A8D"/>
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>

@@ -41,6 +41,7 @@
             <TextView
                 android:textSize="16sp"
                 android:text="手机号"
+                android:paddingRight="15dp"
                 android:textColor="#429A8D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -48,7 +49,7 @@
                 android:id="@+id/id_register_phoneNum"
                 android:inputType="phone"
                 android:backgroundTint="#429A8D"
-                android:layout_width="match_parent"
+                android:layout_width="255dp"
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <LinearLayout
@@ -58,6 +59,7 @@
             <TextView
                 android:textSize="16sp"
                 android:text="验证码"
+                android:paddingRight="15dp"
                 android:textColor="#429A8D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -65,7 +67,7 @@
                 android:id="@+id/id_register_yanzheng"
                 android:inputType="phone"
                 android:backgroundTint="#429A8D"
-                android:layout_width="160dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content" />
             <Button
                 android:layout_gravity="center"
@@ -85,6 +87,7 @@
                 android:textSize="16sp"
                 android:text="密码"
                 android:textColor="#429A8D"
+                android:paddingRight="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <EditText
@@ -120,8 +123,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="400dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp">
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
         <Button
             android:id="@+id/id_register_registBtn"
             android:layout_marginTop="15dp"

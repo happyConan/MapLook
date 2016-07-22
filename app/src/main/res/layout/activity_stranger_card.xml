@@ -1,46 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="#E57741"
+    >
+    <TextView
+        android:text="详细资料"
+        android:textSize="20sp"
+        android:textColor="#429A8D"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-
-    <RelativeLayout
+    android:orientation="vertical"
+    android:paddingTop="60dp">
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingBottom="10dp">
+        <TextView
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="160dp"
+            android:id="@+id/id_p_fcard_icon"
+            android:text="头像"
+            android:textSize="16sp"
+            android:textColor="#598ca1"
+            android:drawableLeft="@drawable/ic_setting_info"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-        <ListView
-            android:id="@+id/strangercard_listView"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:gravity="center"
+            android:paddingTop="10dp">
+            <ImageView
+                android:id="@+id/id_c_fcard_icon"
+                android:background="@drawable/ic_pth"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+        </RelativeLayout>
+    </LinearLayout>
 
-        <Button
-            android:id="@+id/addfriend_strangercard"
-            android:text="添加好友"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <TextView
+            android:id="@+id/id_p_fcard_name"
+            android:text="昵称"
+            android:paddingLeft="20dp"
+            android:paddingRight="200dp"
+            android:drawableLeft="@drawable/ic_card_name"
+            android:textSize="16sp"
+            android:textColor="#598ca1"
 
+            android:gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="41dp"
-            android:layout_marginLeft="87dp"
-            android:layout_marginStart="87dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/sendmessage_strangercard"
-            android:text="发送消息"
-
+        <TextView
+            android:id="@+id/id_c_fcard_name"
+            android:text="后知后觉"
+            android:textSize="16sp"
+            android:textColor="#737070"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="46dp"
-            android:layout_marginStart="46dp"
-            android:layout_alignTop="@+id/addfriend_strangercard"
-            android:layout_toRightOf="@+id/addfriend_strangercard"
-            android:layout_toEndOf="@+id/addfriend_strangercard" />
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <TextView
+            android:id="@+id/id_p_fcard_description"
+            android:text="个人说明"
+            android:paddingLeft="20dp"
+            android:textSize="16sp"
+            android:textColor="#598ca1"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_card_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/id_c_fcard_description"
+            android:text="父母给你的是背景，自己打下来的才叫江山！"
+            android:textSize="16sp"
+            android:paddingLeft="180dp"
+            android:textColor="#737070"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
+    <LinearLayout
+        android:paddingTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_fcard_send"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加好友                                                       "
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/btn_scard_accept"
+            android:textColor="#E57741"
+            android:background="#429A8D"/>
+
+    </LinearLayout>
+
+</LinearLayout>
 
 </LinearLayout>
