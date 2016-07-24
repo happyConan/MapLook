@@ -6,4 +6,8 @@
     <string name="message_name">安卓小分队</string>
     <string name="message_lastestcontent">大家好啊</string>
     <string name="contacts_name">安卓小分队</string>
+    <string-array name="sp_register_gender_array">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
 </resources>

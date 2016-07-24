@@ -30,15 +30,35 @@
         android:layout_height="70dp" />
     <LinearLayout
         android:id="@+id/id_register_info_layout"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="180dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingRight="45dp"
         android:paddingLeft="45dp">
-
         <LinearLayout
             android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:textSize="16sp"
+                android:text="性别"
+                android:paddingRight="45dp"
+                android:textColor="#429A8D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/sp_register_gender_array">
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="15dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -53,7 +73,6 @@
             <TextView
                 android:text="您的生日是？"
                 android:textSize="16sp"
-                android:textColor="#429A8D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -78,7 +97,7 @@
                 android:inputType="number"
                 android:hint="例：19950512"
                 android:textSize="16sp"
-                android:textColor="#429A8D"
+
                 android:textColorHint="#429A8D"
                 android:backgroundTint="#429A8D"
                 android:layout_width="match_parent"
@@ -101,7 +120,6 @@
             <TextView
                 android:text="您父亲的姓名是？"
                 android:textSize="16sp"
-                android:textColor="#429A8D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -125,7 +143,6 @@
                 android:id="@+id/id_register_dadname"
                 android:hint="例：黄晓明"
                 android:textSize="16sp"
-                android:textColor="#429A8D"
                 android:textColorHint="#429A8D"
                 android:backgroundTint="#429A8D"
                 android:layout_width="match_parent"
@@ -148,7 +165,6 @@
                 android:id="@+id/id_register_password"
                 android:inputType="textPassword"
                 android:backgroundTint="#429A8D"
-                android:textColor="#429A8D"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -170,7 +186,6 @@
                 android:id="@+id/id_register_ensurePassword"
                 android:inputType="textPassword"
                 android:backgroundTint="#429A8D"
-                android:textColor="#429A8D"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>

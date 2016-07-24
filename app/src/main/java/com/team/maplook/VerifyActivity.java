@@ -1,12 +1,13 @@
 package com.team.maplook;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class VerifyActivity extends AppCompatActivity {
+public class VerifyActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

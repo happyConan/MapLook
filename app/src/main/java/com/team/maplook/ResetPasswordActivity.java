@@ -21,7 +21,6 @@ public class ResetPasswordActivity extends Activity {
                 intent.setClass(ResetPasswordActivity.this,LoginActivity.class);
                 finish();
                 startActivity(intent);
-
             }
         });
     }
