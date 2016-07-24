@@ -22,7 +22,7 @@
 
     <ImageView
         android:layout_marginTop="80dp"
-        android:src="@drawable/register_icon"
+        android:src="@drawable/ic_hjt"
         android:layout_centerHorizontal="true"
         android:layout_width="70dp"
         android:layout_height="70dp" />
@@ -34,65 +34,97 @@
         android:layout_height="wrap_content"
         android:paddingRight="45dp"
         android:paddingLeft="45dp">
+
         <LinearLayout
+            android:paddingTop="10dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="1">
             <TextView
                 android:textSize="16sp"
-                android:text="手机号"
+                android:text="密保问题1"
                 android:paddingRight="15dp"
                 android:textColor="#429A8D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <EditText
-                android:id="@+id/id_register_phoneNum"
-                android:inputType="phone"
-                android:backgroundTint="#429A8D"
-                android:layout_width="255dp"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
             <TextView
+                android:text="您的生日是？"
                 android:textSize="16sp"
-                android:text="验证码"
-                android:paddingRight="15dp"
                 android:textColor="#429A8D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <EditText
-                android:id="@+id/id_register_yanzheng"
-                android:inputType="phone"
-                android:backgroundTint="#429A8D"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content" />
-            <Button
-                android:layout_gravity="center"
-                android:textSize="15dp"
-                android:text="获取"
-                android:textColor="#429A8D"
-                android:background="#EC9A37"
-                android:layout_width="65dp"
-                android:layout_height="25dp" />
+
         </LinearLayout>
 
         <LinearLayout
+            android:paddingTop="10dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="1">
             <TextView
                 android:textSize="16sp"
-                android:text="密码"
+                android:text="回答"
+                android:paddingEnd="45dp"
                 android:textColor="#429A8D"
                 android:paddingRight="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <EditText
-                android:id="@+id/id_register_password"
-                android:inputType="textPassword"
+                android:id="@+id/id_register_birthday"
+                android:inputType="number"
+                android:hint="例：19950512"
+                android:textSize="16sp"
+                android:textColor="#429A8D"
+                android:textColorHint="#429A8D"
+                android:backgroundTint="#429A8D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:textSize="16sp"
+                android:text="密保问题2"
+                android:paddingRight="15dp"
+                android:textColor="#429A8D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="您父亲的姓名是？"
+                android:textSize="16sp"
+                android:textColor="#429A8D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:textSize="16sp"
+                android:text="回答"
+                android:paddingEnd="46dp"
+                android:textColor="#429A8D"
+                android:paddingRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/id_register_dadname"
+                android:hint="例：黄晓明"
+                android:textSize="16sp"
+                android:textColor="#429A8D"
+                android:textColorHint="#429A8D"
                 android:backgroundTint="#429A8D"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -101,18 +133,42 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="1">
             <TextView
                 android:textSize="16sp"
-                android:text="确认密码"
+                android:text="密码"
                 android:textColor="#429A8D"
+                android:paddingRight="46dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <EditText
+                android:id="@+id/id_register_password"
+                android:inputType="textPassword"
+                android:backgroundTint="#429A8D"
+                android:textColor="#429A8D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:textSize="16sp"
+                android:text="确认密码"
+                android:paddingEnd="16dp"
+                android:textColor="#429A8D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="16dp" />
+            <EditText
                 android:id="@+id/id_register_ensurePassword"
                 android:inputType="textPassword"
                 android:backgroundTint="#429A8D"
+                android:textColor="#429A8D"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -122,17 +178,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="400dp"
+        android:paddingTop="450dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp">
         <Button
             android:id="@+id/id_register_registBtn"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="40dp"
             android:layout_below="@id/id_register_info_layout"
             android:text="注册"
             android:textColor="#E57741"
             android:textSize="20dp"
-            android:background="#429A8D"
+            android:backgroundTint="#429A8D"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

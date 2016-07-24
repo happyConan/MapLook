@@ -44,11 +44,14 @@
         <TextView
             android:textSize="16sp"
             android:text="账号"
+            android:paddingEnd="10dp"
             android:textColor="#E57741"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp" />
         <EditText
             android:backgroundTint="#E57741"
+            android:textColor="#E57741"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -65,9 +68,11 @@
         <TextView
             android:textSize="16sp"
             android:text="密码"
+            android:paddingEnd="10dp"
             android:textColor="#E57741"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -75,11 +80,13 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/login_password"/>
+                android:background="@drawable/login_password"
+                />
             <EditText
                 android:backgroundTint="#E57741"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#E57741"
                 android:inputType="textPassword"/>
         </RelativeLayout>
 
@@ -99,7 +106,7 @@
         android:textColor="#429A8D"
         android:background="#E57741"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="50dp" />
     <LinearLayout
         android:paddingTop="50dp"
         android:orientation="horizontal"

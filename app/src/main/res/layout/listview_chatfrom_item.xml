@@ -5,7 +5,7 @@
 
 
     <TextView
-        android:id="@+id/id_form_msg_date"
+        android:id="@+id/chatfrom_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -15,7 +15,7 @@
         android:textSize="12sp" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
@@ -25,28 +25,35 @@
             android:orientation="vertical" >
 
             <ImageButton
-                android:id="@+id/id_chat_from_image"
-                android:background="#0000"
+                android:id="@+id/chatfrom_image"
+                android:background="@drawable/ic_ctl"
                 android:layout_width="49dp"
                 android:layout_height="49dp"
-                android:src="@mipmap/ic_launcher" />
+                />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="小慕"
-                android:textSize="18sp" >
-            </TextView>
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/id_from_msg_info"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_chatfrom_bg_normal"
-            android:gravity="center_vertical"
-            android:textSize="16sp"
-            android:text="" />
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/chatfrom_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_chatfrom_bg_normal"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:text="还有一只儿子在打游戏" />
+            <TextView
+                android:id="@+id/chatfrom_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Tinyuet"
+                android:textSize="16sp" >
+            </TextView>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

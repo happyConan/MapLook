@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/id_to_msg_date"
+        android:id="@+id/chatto_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="12sp"
@@ -19,29 +19,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/id_to_msg"
-            android:text="你好"
-            android:gravity="center"
-            android:background="@drawable/ic_chatto_bg_normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:id="@+id/id_chat_to_image"
-                android:background="#0000"
-                android:layout_width="49dp"
-                android:layout_height="49dp"
-                android:src="@mipmap/ic_launcher"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
             <TextView
-                android:layout_gravity="center"
-                android:text="John"
-                android:textSize="18sp"
+                android:id="@+id/chatto_info"
+                android:text="啧神经网络真难"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="@drawable/ic_chatto_bg_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/chatto_name"
+                android:layout_gravity="right"
+                android:text="你好像很好吃"
+                android:textSize="16sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/chatto_image"
+                android:background="@drawable/ic_hjt"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                />
 
         </LinearLayout>
 

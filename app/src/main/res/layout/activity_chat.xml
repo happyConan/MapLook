@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="5dp"
-    android:paddingBottom="5dp"
-    android:background="@drawable/ic_chat_bg_default"
-    android:layout_marginRight="5dp"
+    android:orientation="vertical"
     >
-<LinearLayout
-    android:id="@+id/id_chat_titlebar"
-    android:background="#fd0362fa"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:textSize="25sp"
-        android:textColor="#ffff"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="小明"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="45dp"
+        android:background="#E57741"
+        >
+        <TextView
+            android:id="@+id/id_chat_titlebar"
+            android:text="z"
+            android:textSize="20sp"
+            android:textColor="#429A8D"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
-<ListView
-        android:layout_marginTop="5dp"
-        android:layout_above="@+id/id_sendmsm_layout"
+    <ListView
+
         android:id="@+id/id_chat_listView"
-        android:layout_below="@+id/id_chat_titlebar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-</ListView>
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    </ListView>
 
-<RelativeLayout
-    android:layout_alignParentBottom="true"
+<LinearLayout
+    android:padding="5dp"
     android:orientation="horizontal"
     android:id="@+id/id_sendmsm_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
     <EditText
+        android:layout_weight="1"
         android:id="@+id/id_chat_editmsg"
-        android:textSize="40sp"
+        android:textSize="16sp"
         android:background="@drawable/ic_chat_editmsg_normal"
         android:layout_alignBottom="@+id/id_chat_send"
         android:layout_toLeftOf="@+id/id_chat_send"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="40dp"
         android:maxLines="5" />
     <Button
-        android:layout_gravity="top"
+        android:layout_gravity="right"
         android:id="@+id/id_chat_send"
         android:layout_alignParentRight="true"
         android:text="发送"
         android:layout_width="60dp"
-        android:layout_height="40dp" />
-</RelativeLayout>
+        android:layout_height="40dp"
+        android:backgroundTint="#429A8D" />
+</LinearLayout>
 
 
-</RelativeLayout>
+</LinearLayout>
 <!--
 布局说明：上方titlebar为正在聊天的对象的昵称，
          中间listview显示双方聊天内容，根据
