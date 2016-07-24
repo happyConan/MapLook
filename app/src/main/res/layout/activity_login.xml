@@ -125,7 +125,7 @@
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/btn_forgetpwd"
-            android:layout_marginLeft="140dp"
+            android:layout_marginLeft="130dp"
             android:textSize="15sp"
             android:textColor="#429A8D"
             android:layout_gravity="right"

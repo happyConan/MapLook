@@ -18,13 +18,15 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ForgetPasswordActivity" />
+        <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".FriendCardActivity" />
         <activity android:name=".StrangerCardActivity" />
         <activity android:name=".AlterActivity" />
         <activity android:name=".PersonalCardActivity" />
-        <activity android:name=".HandleActivity"></activity>
+        <activity android:name=".HandleActivity" />
+        <activity android:name=".ShowAccountActivity" />
+        <activity android:name=".VerifyActivity"></activity>
     </application>
 
 </manifest>
