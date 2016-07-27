@@ -56,6 +56,12 @@
     <string name="tv_verify_secureanswerhint2">回答</string>
     <string name="tv_verify_secureanswer2">例：张元瀚</string>
     <string name="btn_verify_verify">验证</string>
+    
+    <!--ReserPasswordActivity-->
+    <string name="tv_resetpassword_title">重置密码</string>
+    <string name="tv_resetpassword_resethint">重置密码</string>
+    <string name="tv_resetpassword_confirmhint">确认密码</string>
+    <string name="btn_resetpassword_save">保存</string>
 
 
 </resources>

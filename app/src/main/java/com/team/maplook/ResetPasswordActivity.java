@@ -13,8 +13,8 @@ public class ResetPasswordActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_password);
 
-        Button btn_reset_pwd = (Button) findViewById(R.id.btn_reset_password);
-        btn_reset_pwd.setOnClickListener(new View.OnClickListener() {
+        Button btn_resetpassword_save = (Button) findViewById(R.id.btn_resetpassword_save);
+        btn_resetpassword_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
