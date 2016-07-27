@@ -10,8 +10,10 @@
         android:layout_height="45dp"
         android:background="#429A8D"
         >
+        <!--验证密保-->
         <TextView
-            android:text="验证密保"
+            android:id="@+id/tv_verify_title"
+            android:text="@string/tv_verify_title"
             android:textSize="20sp"
             android:textColor="#E57741"
             android:gravity="center"
@@ -35,20 +37,23 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+            <!--密保问题1-->
             <TextView
+                android:id="@+id/tv_verify_securequestionhint1"
                 android:textSize="16sp"
-                android:text="密保问题1"
+                android:text="@string/tv_verify_securequestionhint1"
                 android:paddingRight="15dp"
                 android:textColor="#E57741"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <!--您的生日是？-->
             <TextView
-                android:text="您的生日是？"
+                android:id="@+id/tv_verify_securequestion1"
+                android:text="@string/tv_verify_securequestion1"
                 android:textSize="16sp"
                 android:textColor="#E57741"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -57,18 +62,20 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+            <!--回答-->
             <TextView
                 android:textSize="16sp"
-                android:text="回答"
+                android:text="@string/tv_verify_secureanswerhint1"
                 android:paddingEnd="45dp"
                 android:textColor="#E57741"
                 android:paddingRight="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <!--例：19950512-->
             <EditText
-                android:id="@+id/id_register_birthday"
+                android:id="@+id/tv_verify_secureanswer1"
                 android:inputType="number"
-                android:hint="例：19950512"
+                android:hint="@string/tv_verify_secureanswer1"
                 android:textSize="16sp"
                 android:textColor="#E57741"
                 android:textColorHint="#E57741"
@@ -83,15 +90,19 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+            <!--密保问题2-->
             <TextView
+                android:id="@+id/tv_verify_securequestionhint2"
                 android:textSize="16sp"
-                android:text="密保问题2"
+                android:text="@string/tv_verify_securequestionhint2"
                 android:paddingRight="15dp"
                 android:textColor="#E57741"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <!--您父亲的姓名是？-->
             <TextView
-                android:text="您父亲的姓名是？"
+                android:id="@+id/tv_verify_securequestion2"
+                android:text="@string/tv_verify_securequestion2"
                 android:textSize="16sp"
                 android:textColor="#E57741"
                 android:layout_width="wrap_content"
@@ -105,17 +116,20 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+            <!--回答-->
             <TextView
+                android:id="@+id/tv_verify_secureanswerhint2"
                 android:textSize="16sp"
-                android:text="回答"
+                android:text="@string/tv_verify_secureanswerhint2"
                 android:paddingEnd="46dp"
                 android:textColor="#E57741"
                 android:paddingRight="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+            <!--张元瀚-->
             <EditText
-                android:id="@+id/id_register_dadname"
-                android:hint="例：黄晓明"
+                android:id="@+id/tv_verify_secureanswer2"
+                android:hint="@string/tv_verify_secureanswer2"
                 android:textSize="16sp"
                 android:textColor="#E57741"
                 android:textColorHint="#E57741"
@@ -132,11 +146,12 @@
         android:paddingTop="350dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp">
+        <!--验证-->
         <Button
-            android:id="@+id/btn_verify"
+            android:id="@+id/btn_verify_verify"
             android:layout_marginTop="40dp"
             android:layout_below="@id/id_register_info_layout"
-            android:text="验证"
+            android:text="@string/btn_verify_verify"
             android:textColor="#E57741"
             android:textSize="20dp"
             android:backgroundTint="#429A8D"

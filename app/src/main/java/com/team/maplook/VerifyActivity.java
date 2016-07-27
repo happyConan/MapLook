@@ -15,8 +15,8 @@ public class VerifyActivity extends Activity {
         setContentView(R.layout.activity_verify);
 
 
-        Button btn_verify = (Button)findViewById(R.id.btn_verify);
-        btn_verify.setOnClickListener(new View.OnClickListener() {
+        Button btn_verify_verify = (Button)findViewById(R.id.btn_verify_verify);
+        btn_verify_verify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();

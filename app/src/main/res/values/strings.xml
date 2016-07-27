@@ -45,7 +45,17 @@
     <string name="tv_showaccount_account">524414145</string>
     <string name="btn_showaccount_backtologin">返回登录界面</string>
 
-
+    <!--VerifyActivity-->
+    <string name="tv_verify_title">验证密保</string>
+    <string name="tv_verify_securequestionhint1">密保问题1</string>
+    <string name="tv_verify_securequestion1">您的生日是？</string>
+    <string name="tv_verify_secureanswerhint1">回答</string>
+    <string name="tv_verify_secureanswer1">例：19950512</string>
+    <string name="tv_verify_securequestionhint2">密保问题2</string>
+    <string name="tv_verify_securequestion2">您父亲的姓名是？</string>
+    <string name="tv_verify_secureanswerhint2">回答</string>
+    <string name="tv_verify_secureanswer2">例：张元瀚</string>
+    <string name="btn_verify_verify">验证</string>
 
 
 </resources>
