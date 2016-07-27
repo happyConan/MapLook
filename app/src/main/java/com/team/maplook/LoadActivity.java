@@ -26,15 +26,15 @@ public class LoadActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_load);
         //设置背景图由深变浅效果
-        Animation alpha = AnimationUtils.loadAnimation(this,R.anim.alpha);
-        //设置文字图由浅变深效果
-        Animation alpha2 = AnimationUtils.loadAnimation(this,R.anim.alpha_word);
-        ImageView bg = (ImageView)findViewById(R.id.load_image);
-        ImageView chword = (ImageView)findViewById(R.id.load_word_ch);
-        ImageView enword = (ImageView)findViewById(R.id.load_word_en);
-        bg.startAnimation(alpha);
-        chword.startAnimation(alpha2);
-        enword.startAnimation(alpha2);
+        Animation alpha_bg = AnimationUtils.loadAnimation(this,R.anim.alpha_bg);
+        //设置logo图由浅变深效果
+        Animation alpha_logo = AnimationUtils.loadAnimation(this,R.anim.alpha_logo);
+        ImageView image_load_bg = (ImageView)findViewById(R.id.image_load_bg);
+        ImageView image_load_logoch = (ImageView)findViewById(R.id.image_load_logoch);
+        ImageView image_load_logoen = (ImageView)findViewById(R.id.image_load_logoen);
+        image_load_bg.startAnimation(alpha_bg);
+        image_load_logoch.startAnimation(alpha_logo);
+        image_load_logoen.startAnimation(alpha_logo);
         //延迟两秒后执行run方法中的页面跳转
         new Handler().postDelayed(new Runnable() {
             @Override

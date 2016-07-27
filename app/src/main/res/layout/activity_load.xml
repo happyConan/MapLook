@@ -12,8 +12,8 @@
         android:background="#E57741"
         >
         <TextView
-            android:id="@+id/tv_tittle"
-            android:text="麻蒲路"
+            android:id="@+id/tv_load_title"
+            android:text="@string/tv_load_title"
             android:textSize="20sp"
             android:textColor="#429A8D"
             android:gravity="center"
@@ -26,25 +26,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:id="@+id/load_image"
+            android:id="@+id/image_load_bg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_load"/>
+            android:background="@drawable/image_load_bg"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
             <ImageView
-                android:id="@+id/load_word_ch"
+                android:id="@+id/image_load_logoch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/load_word_ch"/>
+                android:background="@drawable/image_load_logoch"/>
             <ImageView
-                android:id="@+id/load_word_en"
+                android:id="@+id/image_load_logoen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/load_word_en"/>
+                android:background="@drawable/image_load_logoen"/>
 
         </LinearLayout>
 

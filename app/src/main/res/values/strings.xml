@@ -10,4 +10,6 @@
         <item>男</item>
         <item>女</item>
     </string-array>
+
+    <string name="tv_load_title">麻蒲路</string>
 </resources>
