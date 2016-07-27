@@ -138,7 +138,7 @@
                     android:text="@string/btn_personalcard_alterhp"
                     android:textSize="16sp"
                     android:textAlignment="viewStart"
-                    android:drawableLeft="@drawable/image_personalcard_alterhp"
+                    android:drawableLeft="@drawable/btn_personalcard_alterhp"
                     android:textColor="#E57741"
                     android:background="#429A8D"/>
                 <!--修改资料-->
@@ -151,7 +151,7 @@
                     android:text="@string/btn_personalcard_alterinfo"
                     android:textAlignment="viewStart"
                     android:textSize="16sp"
-                    android:drawableLeft="@drawable/image_personalcard_alterinfo"
+                    android:drawableLeft="@drawable/btn_personalcard_alterinfo"
                     android:textColor="#E57741"
                     android:background="#429A8D"/>
             </LinearLayout>

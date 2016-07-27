@@ -110,4 +110,12 @@
     <string name="btn_personalcard_alterhp">修改头像</string>
     <string name="btn_personalcard_alterinfo">修改资料</string>
 
+    <!--HandleCardActivity-->
+    <string name="tv_handlecard_title">好友请求</string>
+    <string name="tv_handlecard_gener">男</string>
+    <string name="tv_handlecard_name">Tinyuet</string>
+    <string name="tv_handlecard_description">这个世界，还有太多的神奇，我们要一直欢笑，去发现美好。</string>
+    <string name="btn_handlecard_accept">接受请求</string>
+    <string name="btn_handlecard_reject">拒绝请求</string>
+
 </resources>

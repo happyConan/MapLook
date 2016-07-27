@@ -26,7 +26,7 @@
 
             <ImageButton
                 android:id="@+id/chatfrom_image"
-                android:background="@drawable/ic_ctl"
+                android:background="@drawable/image_handlecard_hp"
                 android:layout_width="49dp"
                 android:layout_height="49dp"
                 />

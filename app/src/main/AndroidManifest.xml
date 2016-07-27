@@ -24,7 +24,7 @@
         <activity android:name=".StrangerCardActivity" />
         <activity android:name=".AlterActivity" />
         <activity android:name=".PersonalCardActivity" />
-        <activity android:name=".HandleActivity" />
+        <activity android:name=".HandleCardActivity" />
         <activity android:name=".ShowAccountActivity" />
         <activity android:name=".VerifyActivity"></activity>
     </application>

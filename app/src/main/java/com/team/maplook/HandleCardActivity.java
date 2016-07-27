@@ -1,14 +1,13 @@
 package com.team.maplook;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class HandleActivity extends Activity {
+public class HandleCardActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_handle);
+        setContentView(R.layout.activity_handle_card);
     }
 }

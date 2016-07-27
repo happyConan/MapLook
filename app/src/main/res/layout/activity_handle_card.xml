@@ -11,8 +11,10 @@
         android:layout_height="45dp"
         android:background="#E57741"
         >
+        <!--好友请求-->
         <TextView
-            android:text="好友请求"
+            android:id="@+id/tv_handlecard_title"
+            android:text="@string/tv_handlecard_title"
             android:textSize="20sp"
             android:textColor="#429A8D"
             android:gravity="center"
@@ -32,12 +34,13 @@
             android:layout_height="wrap_content"
             android:background="#ffffff"
             android:paddingBottom="10dp">
+            <!--头像-->
             <TextView
                 android:layout_gravity="center"
                 android:paddingLeft="20dp"
                 android:paddingRight="160dp"
-                android:id="@+id/id_p_fcard_icon"
-                android:text="头像"
+                android:id="@+id/tv_handlecard_hphint"
+                android:text="@string/tv_card_hphint"
                 android:textSize="16sp"
                 android:textColor="#598ca1"
                 android:drawableLeft="@drawable/ic_setting_info"
@@ -51,8 +54,8 @@
                 android:gravity="center"
                 android:paddingTop="10dp">
                 <ImageView
-                    android:id="@+id/id_c_fcard_icon"
-                    android:background="@drawable/ic_ctl"
+                    android:id="@+id/image_handlecard_hp"
+                    android:background="@drawable/image_handlecard_hp"
                     android:layout_alignParentRight="true"
                     android:layout_centerInParent="true"
                     android:layout_width="80dp"
@@ -65,22 +68,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff">
+            <!--昵称-->
             <TextView
                 android:id="@+id/id_p_fcard_name"
-                android:text="昵称"
+                android:text="@string/tv_card_namehint"
                 android:paddingLeft="20dp"
                 android:paddingRight="200dp"
                 android:drawableLeft="@drawable/image_card_namehint"
                 android:textSize="16sp"
                 android:textColor="#598ca1"
-
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
+            <!--Tinyuet-->
             <TextView
-                android:id="@+id/id_c_fcard_name"
-                android:text="Tinyuet"
+                android:id="@+id/tv_handlecard_name"
+                android:text="@string/tv_handlecard_name"
                 android:textSize="16sp"
                 android:textColor="#737070"
                 android:layout_alignParentRight="true"
@@ -94,9 +97,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff">
+            <!--个人说明-->
             <TextView
-                android:id="@+id/id_p_fcard_description"
-                android:text="个人说明"
+                android:id="@+id/tv_card_descriptionhint"
+                android:text="@string/tv_card_descriptionhint"
                 android:paddingLeft="20dp"
                 android:paddingTop="5dp"
                 android:textSize="16sp"
@@ -105,10 +109,10 @@
                 android:drawableLeft="@drawable/image_card_descriptionhint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
+            <!--这个世界，还有太多的神奇，我们要一直欢笑，去发现美好。-->
             <TextView
                 android:id="@+id/id_c_fcard_description"
-                android:text="这个世界，还有太多的神奇，我们要一直欢笑，去发现美好。"
+                android:text="@string/tv_handlecard_description"
                 android:textSize="16sp"
                 android:paddingLeft="180dp"
                 android:textColor="#737070"
@@ -122,26 +126,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <!--接受请求　-->
             <Button
-                android:id="@+id/btn_handle_accept"
+                android:id="@+id/btn_handlecard_accept"
                 android:paddingLeft="20dp"
                 android:paddingRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="接受请求                                                       "
+                android:text="@string/btn_handlecard_accept"
                 android:textSize="16sp"
-                android:drawableLeft="@drawable/ic_handle_accept"
+                android:textAlignment="viewStart"
+                android:drawableLeft="@drawable/btn_handlecard_accept"
                 android:textColor="#E57741"
                 android:background="#429A8D"/>
             <Button
-                android:id="@+id/btn_handle_reject"
+                android:id="@+id/btn_handlecard_reject"
                 android:paddingLeft="20dp"
                 android:paddingRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="拒绝请求                                                       "
+                android:text="@string/btn_handlecard_reject"
                 android:textSize="16sp"
-                android:drawableLeft="@drawable/image_personalcard_alterinfo"
+                android:textAlignment="viewStart"
+                android:drawableLeft="@drawable/btn_handlecard_reject"
                 android:textColor="#E57741"
                 android:background="#429A8D"/>
         </LinearLayout>

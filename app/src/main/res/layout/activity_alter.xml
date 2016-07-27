@@ -138,7 +138,7 @@
                 android:text="保存                                                               "
                 android:textSize="16sp"
 
-                android:drawableLeft="@drawable/image_personalcard_alterinfo"
+                android:drawableLeft="@drawable/btn_personalcard_alterinfo"
                 android:textColor="#E57741"
                 android:background="#429A8D"/>
         </LinearLayout>
