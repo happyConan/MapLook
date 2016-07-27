@@ -11,9 +11,10 @@
             android:layout_height="45dp"
             android:background="#E57741"
             >
+            <!--个人资料-->
             <TextView
-                android:id="@+id/home_title"
-                android:text="个人资料"
+                android:id="@+id/tv_personalcard_title"
+                android:text="@string/tv_personalcard_title"
                 android:textSize="20sp"
                 android:textColor="#429A8D"
                 android:gravity="center"
@@ -34,15 +35,16 @@
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
                 android:paddingBottom="10dp">
+                <!--头像-->
                 <TextView
                     android:layout_gravity="center"
                     android:paddingLeft="20dp"
                     android:paddingRight="160dp"
-                    android:id="@+id/id_p_card_icon"
-                    android:text="头像"
+                    android:id="@+id/tv_personalcard_hphint"
+                    android:text="@string/tv_card_hphint"
                     android:textSize="16sp"
                     android:textColor="#598ca1"
-                    android:drawableLeft="@drawable/ic_setting_info"
+                    android:drawableLeft="@drawable/image_card_hphint"
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -54,7 +56,7 @@
                     android:paddingTop="10dp">
                     <ImageView
                         android:id="@+id/id_c_card_icon"
-                        android:background="@drawable/ic_hjt"
+                        android:background="@drawable/image_personalcard_hp"
                         android:layout_alignParentRight="true"
                         android:layout_centerInParent="true"
                         android:layout_width="80dp"
@@ -68,25 +70,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff">
+                <!--昵称-->
                 <TextView
-                    android:id="@+id/id_p_card_name"
-                    android:text="昵称"
+                    android:id="@+id/tv_personalcard_namehint"
+                    android:text="@string/tv_card_namehint"
                     android:paddingLeft="20dp"
                     android:paddingRight="160dp"
-                    android:drawableLeft="@drawable/ic_card_name"
+                    android:drawableLeft="@drawable/image_card_namehint"
                     android:textSize="16sp"
                     android:textColor="#598ca1"
-
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
+                <!--你好像很好吃-->
                 <TextView
-                    android:id="@+id/id_c_card_name"
-                    android:text="你好像很好吃"
+                    android:id="@+id/tv_personalcard_name"
+                    android:text="@string/tv_personalcard_name"
                     android:textSize="16sp"
                     android:textColor="#737070"
-
                     android:layout_alignParentRight="true"
                     android:gravity="center"
                     android:layout_width="wrap_content"
@@ -99,24 +100,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff">
+                <!--个人说明-->
                 <TextView
-                    android:id="@+id/id_p_card_description"
-                    android:text="个人说明"
+                    android:id="@+id/tv_personalcard_descriptionhint"
+                    android:text="@string/tv_card_descriptionhint"
                     android:paddingLeft="20dp"
                     android:paddingRight="70dp"
                     android:textSize="16sp"
                     android:textColor="#598ca1"
                     android:gravity="center"
-                    android:drawableLeft="@drawable/ic_card_description"
+                    android:drawableLeft="@drawable/image_card_descriptionhint"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
+                <!--Now get out of my life-->
                 <TextView
-                    android:id="@+id/id_c_card_description"
-                    android:text="Now get out of my life"
+                    android:id="@+id/tv_personalcard_description"
+                    android:text="@string/tv_personalcard_description"
                     android:textSize="16sp"
                     android:textColor="#737070"
-
                     android:layout_alignParentRight="true"
                     android:gravity="center"
                     android:layout_width="wrap_content"
@@ -127,26 +128,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+                <!--修改头像-->
                 <Button
-                    android:id="@+id/btn_alter_icon"
+                    android:id="@+id/btn_personalcard_alterhp"
                     android:paddingLeft="20dp"
                     android:paddingRight="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="修改头像                                                       "
+                    android:text="@string/btn_personalcard_alterhp"
                     android:textSize="16sp"
-                    android:drawableLeft="@drawable/ic_setting_chatbg"
+                    android:textAlignment="viewStart"
+                    android:drawableLeft="@drawable/image_personalcard_alterhp"
                     android:textColor="#E57741"
                     android:background="#429A8D"/>
+                <!--修改资料-->
                 <Button
-                    android:id="@+id/btn_alter_info"
+                    android:id="@+id/btn_personalcard_alterinfo"
                     android:paddingLeft="20dp"
                     android:paddingRight="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="修改资料                                                     >"
+                    android:text="@string/btn_personalcard_alterinfo"
+                    android:textAlignment="viewStart"
                     android:textSize="16sp"
-                    android:drawableLeft="@drawable/ic_card_alterinfo"
+                    android:drawableLeft="@drawable/image_personalcard_alterinfo"
                     android:textColor="#E57741"
                     android:background="#429A8D"/>
             </LinearLayout>

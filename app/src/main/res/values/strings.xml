@@ -95,5 +95,19 @@
     <string name="btn_setting_chatbg">聊天背景</string>
     <string name="btn_setting_quit">退出登录</string>
 
+    <!--**CardActivity共用-->
+    <string name="tv_card_hphint">头像</string>
+    <string name="tv_card_genderhint">性别</string>
+    <string name="tv_card_namehint">昵称</string>
+    <string name="tv_card_descriptionhint">个人说明</string>
+
+
+    <!--PersonalCardActivity-->
+    <string name="tv_personalcard_title">个人资料</string>
+    <string name="tv_personalcard_gender">男</string>
+    <string name="tv_personalcard_name">你好像很好吃</string>
+    <string name="tv_personalcard_description">Now get out of my life</string>
+    <string name="btn_personalcard_alterhp">修改头像</string>
+    <string name="btn_personalcard_alterinfo">修改资料</string>
 
 </resources>

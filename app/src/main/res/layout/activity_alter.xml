@@ -38,7 +38,7 @@
                 android:text="昵称"
                 android:paddingLeft="20dp"
                 android:paddingRight="90dp"
-                android:drawableLeft="@drawable/ic_card_name"
+                android:drawableLeft="@drawable/image_card_namehint"
                 android:textSize="16sp"
                 android:textColor="#598ca1"
 
@@ -73,7 +73,7 @@
                 android:textSize="16sp"
                 android:textColor="#598ca1"
                 android:gravity="center"
-                android:drawableLeft="@drawable/ic_card_description"
+                android:drawableLeft="@drawable/image_card_descriptionhint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -138,7 +138,7 @@
                 android:text="保存                                                               "
                 android:textSize="16sp"
 
-                android:drawableLeft="@drawable/ic_card_alterinfo"
+                android:drawableLeft="@drawable/image_personalcard_alterinfo"
                 android:textColor="#E57741"
                 android:background="#429A8D"/>
         </LinearLayout>

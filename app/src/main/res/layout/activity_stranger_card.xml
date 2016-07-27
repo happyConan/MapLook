@@ -70,7 +70,7 @@ android:layout_height="match_parent">
             android:text="昵称"
             android:paddingLeft="20dp"
             android:paddingRight="200dp"
-            android:drawableLeft="@drawable/ic_card_name"
+            android:drawableLeft="@drawable/image_card_namehint"
             android:textSize="16sp"
             android:textColor="#598ca1"
 
@@ -101,7 +101,7 @@ android:layout_height="match_parent">
             android:textSize="16sp"
             android:textColor="#598ca1"
             android:gravity="center"
-            android:drawableLeft="@drawable/ic_card_description"
+            android:drawableLeft="@drawable/image_card_descriptionhint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
