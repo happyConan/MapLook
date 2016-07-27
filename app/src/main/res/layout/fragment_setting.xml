@@ -11,18 +11,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <!--基本资料-->
         <Button
             android:id="@+id/btn_setting_info"
-            android:text="基本资料                                                        >"
+            android:text="@string/btn_setting_info"
             android:textSize="16sp"
             android:textColor="#598ca1"
+            android:textAlignment="viewStart"
             android:background="#ffffff"
             android:layout_width="match_parent"
             android:drawableLeft="@drawable/ic_setting_info"
             android:layout_height="wrap_content" />
+        <!--聊天背景-->
         <Button
             android:id="@+id/btn_setting_chatbg"
-            android:text="聊天背景                                                        >"
+            android:text="@string/btn_setting_chatbg"
+            android:textAlignment="viewStart"
             android:textSize="16sp"
             android:background="#ffffff"
             android:textColor="#598ca1"
@@ -31,7 +35,7 @@
             android:drawableLeft="@drawable/ic_setting_chatbg"
             />
     </LinearLayout>
-
+    <!--退出登录-->
     <LinearLayout
         android:paddingTop="150dp"
         android:layout_width="match_parent"
@@ -39,16 +43,13 @@
         <Button
             android:gravity="center"
             android:id="@+id/btn_setting_quit"
-            android:text="退出登录                                                         "
+            android:text="@string/btn_setting_quit"
+            android:textAlignment="viewStart"
             android:textSize="16sp"
             android:textColor="#598ca1"
             android:background="#E57741"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_setting_quit"/>
-
     </LinearLayout>
-
-
-
 </RelativeLayout>

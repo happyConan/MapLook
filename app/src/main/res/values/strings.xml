@@ -90,5 +90,10 @@
     <string name="tv_contacts_name_2">子丑寅卯</string>
     <string name="tv_contacts_name_3">z</string>
 
+    <!--SettingFragment-->
+    <string name="btn_setting_info">基本资料</string>
+    <string name="btn_setting_chatbg">聊天背景</string>
+    <string name="btn_setting_quit">退出登录</string>
+
 
 </resources>
