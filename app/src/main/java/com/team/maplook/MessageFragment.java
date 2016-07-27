@@ -18,7 +18,7 @@ public class MessageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_message, container,false);
-        ListView listView = (ListView) view.findViewById(R.id.id_message_listview);
+        ListView listView = (ListView) view.findViewById(R.id.lv_message_content);
         MessageAdapter messageAdapter = new MessageAdapter(getActivity());
         listView.setAdapter(messageAdapter);
         return view;

@@ -73,6 +73,17 @@
     <string name="tv_home_text_discovery">发现</string>
     <string name="tv_home_text_setting">设置</string>
 
+    <!--MessageFragment-->
+    <string name="tv_message_name_1">嗯哼嗯哼大王嗬嗬哈嘿</string>
+    <string name="tv_message_message_1">晚安！加油</string>
+    <string name="tv_message_time_1">23:56</string>
+    <string name="tv_message_name_2">子丑寅卯</string>
+    <string name="tv_message_message_2">好，谢谢</string>
+    <string name="tv_message_time_2">昨天</string>
+    <string name="tv_message_name_3">z</string>
+    <string name="tv_message_message_3">你有啊，我</string>
+    <string name="tv_message_time_3">前天</string>
+
 
 
 </resources>
