@@ -25,5 +25,4 @@ public class ShowAccountActivity extends Activity {
             }
         });
     }
-
 }
