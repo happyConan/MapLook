@@ -84,6 +84,11 @@
     <string name="tv_message_message_3">你有啊，我</string>
     <string name="tv_message_time_3">前天</string>
 
+    <!--ContactsFragment-->
+    <string name="et_contacts_search">搜索</string>
+    <string name="tv_contacts_name_1">嗯哼嗯哼大王嗬嗬哈嘿</string>
+    <string name="tv_contacts_name_2">子丑寅卯</string>
+    <string name="tv_contacts_name_3">z</string>
 
 
 </resources>

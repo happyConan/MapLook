@@ -21,10 +21,18 @@ public class ContactsAdapter extends BaseAdapter {
     public ContactsAdapter(Context context) {
         layoutInflater = LayoutInflater.from(context);
         contactsMemberList = new ArrayList<>();
-        contactsMemberList.add(new ContactsMember(R.drawable.ic_hjt,"你好像很好吃"));
-        contactsMemberList.add(new ContactsMember(R.drawable.ic_sjp,"嗯哼嗯哼大王嗬嗬哈嘿"));
-        contactsMemberList.add(new ContactsMember(R.drawable.ic_wf,"子丑寅卯"));
-        contactsMemberList.add(new ContactsMember(R.drawable.ic_wg,"向前走，无所畏"));
+
+        contactsMemberList.add(new ContactsMember(R.drawable.image_contacts_hp_1,
+                context.getString(R.string.tv_contacts_name_1)));
+        contactsMemberList.add(new ContactsMember(R.drawable.image_contacts_hp_2,
+                context.getString(R.string.tv_contacts_name_2)));
+        contactsMemberList.add(new ContactsMember(R.drawable.image_contacts_hp_3,
+                context.getString(R.string.tv_contacts_name_3)));
+
+//        contactsMemberList.add(new ContactsMember(R.drawable.ic_hjt,"你好像很好吃"));
+//        contactsMemberList.add(new ContactsMember(R.drawable.ic_sjp,"嗯哼嗯哼大王嗬嗬哈嘿"));
+//        contactsMemberList.add(new ContactsMember(R.drawable.ic_wf,"子丑寅卯"));
+//        contactsMemberList.add(new ContactsMember(R.drawable.ic_wg,"向前走，无所畏"));
     }
 
 
@@ -51,8 +59,8 @@ public class ContactsAdapter extends BaseAdapter {
         //按照i获取contactsMemberList内的contactsMember对象
         ContactsMember contactsMember = contactsMemberList.get(i);
         //找到成员子组件显示名字、头像、最新消息
-        TextView contacts_name = (TextView)view.findViewById(R.id.contacts_name);
-        ImageView contacts_image = (ImageView)view.findViewById(R.id.contacts_image);
+        TextView contacts_name = (TextView)view.findViewById(R.id.tv_contacts_name);
+        ImageView contacts_image = (ImageView)view.findViewById(R.id.image_contacts_hp);
         contacts_name.setText(contactsMember.getContacts_name());
         contacts_image.setImageResource(contactsMember.getContacts_image());
         return view;

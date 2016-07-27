@@ -20,7 +20,7 @@ public class ContactsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_contacts, container,false);
-        listView = (ListView) view.findViewById(R.id.id_contacts_listview);
+        listView = (ListView) view.findViewById(R.id.lv_contacts_content);
         contactsAdapter = new ContactsAdapter(getActivity());
         listView.setAdapter(contactsAdapter);
         return view;

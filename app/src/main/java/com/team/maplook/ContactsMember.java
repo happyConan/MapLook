@@ -5,10 +5,10 @@ package com.team.maplook;
  */
 public class ContactsMember {
     String contacts_name;
-    int contacts_image;
+    int contacts_hp;
 
-    public ContactsMember(int contacts_image, String contacts_name) {
-        this.contacts_image = contacts_image;
+    public ContactsMember(int contacts_hp, String contacts_name) {
+        this.contacts_hp = contacts_hp;
         this.contacts_name = contacts_name;
     }
 
@@ -17,6 +17,6 @@ public class ContactsMember {
     }
 
     public int getContacts_image() {
-        return contacts_image;
+        return contacts_hp;
     }
 }

@@ -22,15 +22,15 @@ public class MessageAdapter extends BaseAdapter {
         layoutInflater = LayoutInflater.from(context);
         messageMemberList = new ArrayList<>();
         messageMemberList.add(new MessageMember(context.getString(R.string.tv_message_name_1),
-                R.drawable.image_message_ic_1,
+                R.drawable.image_message_hp_1,
                 context.getString(R.string.tv_message_message_1),
                 context.getString(R.string.tv_message_time_1)));
         messageMemberList.add(new MessageMember(context.getString(R.string.tv_message_name_2),
-                R.drawable.image_message_ic_2,
+                R.drawable.image_message_hp_2,
                 context.getString(R.string.tv_message_message_2),
                 context.getString(R.string.tv_message_time_2)));
         messageMemberList.add(new MessageMember(context.getString(R.string.tv_message_name_3),
-                R.drawable.image_message_ic_3,
+                R.drawable.image_message_hp_3,
                 context.getString(R.string.tv_message_message_3),
                 context.getString(R.string.tv_message_time_3)));
 //        messageMemberList.add(new MessageMember("嗯哼嗯哼大王嗬嗬哈嘿",R.drawable.ic_sjp,"晚安！加油","23:56"));
@@ -68,11 +68,11 @@ public class MessageAdapter extends BaseAdapter {
         MessageMember messageMember = messageMemberList.get(i);
         //找到成员子组件显示名字、头像、最新消息
         TextView message_name = (TextView)view.findViewById(R.id.tv_message_name);
-        ImageView message_image = (ImageView)view.findViewById(R.id.image_message_ic);
+        ImageView message_hp = (ImageView)view.findViewById(R.id.image_message_hp);
         TextView message_message = (TextView)view.findViewById(R.id.tv_message_message);
         TextView message_time = (TextView) view.findViewById(R.id.tv_message_time);
         message_name.setText(messageMember.getMessage_name());
-        message_image.setImageResource(messageMember.getMessage_image());
+        message_hp.setImageResource(messageMember.getMessage_hp());
         message_message.setText(messageMember.getMessage_message());
         message_time.setText(messageMember.getMessage_time());
         return view;
