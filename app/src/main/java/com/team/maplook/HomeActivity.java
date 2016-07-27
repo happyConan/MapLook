@@ -3,7 +3,6 @@ package com.team.maplook;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -21,20 +20,20 @@ public class HomeActivity extends FragmentActivity implements View.OnClickListen
     //帧布局对象,就是用来存放Fragment的容器
     private FrameLayout flayout;
     //定义底部导航栏的三个布局
-    private RelativeLayout message_layout;
-    private RelativeLayout contacts_layout;
-    private RelativeLayout discovery_layout;
-    private RelativeLayout setting_layout;
+    private RelativeLayout relativelayout_home_message;
+    private RelativeLayout relativelayout_home_contacts;
+    private RelativeLayout relativelayout_home_discovery;
+    private RelativeLayout relativelayout_home_setting;
     //定义底部导航栏中的ImageView与TextView
-    private TextView home_title;
-    private ImageView message_image;
-    private ImageView contacts_image;
-    private ImageView discovery_image;
-    private ImageView setting_image;
-    private TextView message_text;
-    private TextView discovery_text;
-    private TextView contacts_text;
-    private TextView setting_text;
+    private TextView tv_home_title;
+    private ImageView image_home_ic_message;
+    private ImageView image_home_ic_contacts;
+    private ImageView image_home_ic_discovery;
+    private ImageView image_home_ic_setting;
+    private TextView tv_home_text_message;
+    private TextView tv_home_text_discovery;
+    private TextView tv_home_text_contacts;
+    private TextView tv_home_text_setting;
     //定义要用的颜色值
     private int whirt = 0xFFFFFFFF;
     private int gray = 0xFFDDDDDD;
@@ -52,38 +51,38 @@ public class HomeActivity extends FragmentActivity implements View.OnClickListen
     }
     //组件初始化
     private void initViews() {
-        home_title = (TextView) findViewById(R.id.home_title);
-        message_image = (ImageView) findViewById(R.id.message_image);
-        contacts_image = (ImageView) findViewById(R.id.contacts_image);
-        discovery_image = (ImageView) findViewById(R.id.discovery_image);
-        setting_image = (ImageView) findViewById(R.id.setting_image);
-        message_text = (TextView) findViewById(R.id.message_text);
-        contacts_text = (TextView) findViewById(R.id.contacts_text);
-        discovery_text = (TextView) findViewById(R.id.discovery_text);
-        setting_text = (TextView) findViewById(R.id.setting_text);
-        message_layout = (RelativeLayout) findViewById(R.id.message_layout);
-        contacts_layout = (RelativeLayout) findViewById(R.id.contacts_layout);
-        discovery_layout = (RelativeLayout) findViewById(R.id.discovery_layout);
-        setting_layout = (RelativeLayout) findViewById(R.id.setting_layout);
-        message_layout.setOnClickListener(this);
-        contacts_layout.setOnClickListener(this);
-        discovery_layout.setOnClickListener(this);
-        setting_layout.setOnClickListener(this);
+        tv_home_title = (TextView) findViewById(R.id.tv_home_title);
+        image_home_ic_message = (ImageView) findViewById(R.id.image_home_ic_message);
+        image_home_ic_contacts = (ImageView) findViewById(R.id.image_home_ic_contacts);
+        image_home_ic_discovery = (ImageView) findViewById(R.id.image_home_ic_discovery);
+        image_home_ic_setting = (ImageView) findViewById(R.id.image_home_ic_setting);
+        tv_home_text_message = (TextView) findViewById(R.id.tv_home_text_message);
+        tv_home_text_contacts = (TextView) findViewById(R.id.tv_home_text_contacts);
+        tv_home_text_discovery = (TextView) findViewById(R.id.tv_home_text_discovery);
+        tv_home_text_setting = (TextView) findViewById(R.id.tv_home_text_setting);
+        relativelayout_home_message = (RelativeLayout) findViewById(R.id.relativelayout_home_message);
+        relativelayout_home_contacts = (RelativeLayout) findViewById(R.id.relativelayout_home_contacts);
+        relativelayout_home_discovery = (RelativeLayout) findViewById(R.id.relativelayout_home_discovery);
+        relativelayout_home_setting = (RelativeLayout) findViewById(R.id.relativelayout_home_setting);
+        relativelayout_home_message.setOnClickListener(this);
+        relativelayout_home_contacts.setOnClickListener(this);
+        relativelayout_home_discovery.setOnClickListener(this);
+        relativelayout_home_setting.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.message_layout:
+            case R.id.relativelayout_home_message:
                 setChioceItem(0);
                 break;
-            case R.id.contacts_layout:
+            case R.id.relativelayout_home_contacts:
                 setChioceItem(1);
                 break;
-            case R.id.discovery_layout:
+            case R.id.relativelayout_home_discovery:
                 setChioceItem(2);
                 break;
-            case R.id.setting_layout:
+            case R.id.relativelayout_home_setting:
                 setChioceItem(3);
             default:
                 break;
@@ -96,56 +95,60 @@ public class HomeActivity extends FragmentActivity implements View.OnClickListen
         clearChioce();
         hideFragments(transaction);
         switch (index) {
+            //消息界面
             case 0:
-                home_title.setText("消息");
-                message_image.setImageResource(R.drawable.ic_tabbar_message_pressed);
-                message_text.setTextColor(green);
+                tv_home_title.setText(R.string.tv_home_title_message);
+                image_home_ic_message.setImageResource(R.drawable.image_home_ic_message_pressed);
+                tv_home_text_message.setTextColor(green);
 //                message_layout.setBackgroundResource(R.mipmap.ic_launcher);
                 if (messageFragment == null) {
                     // 如果messageFragment为空，则创建一个并添加到界面上
                     messageFragment = new MessageFragment();
-                    transaction.add(R.id.content, messageFragment);
+                    transaction.add(R.id.framelayout_home_content, messageFragment);
                 } else {
                     // 如果MessageFragment不为空，则直接将它显示出来
                     transaction.show(messageFragment);
                 }
                 break;
+            //好友界面
             case 1:
-                home_title.setText("好友");
-                contacts_image.setImageResource(R.drawable.ic_tabbar_contacts_pressed);
-                contacts_text.setTextColor(green);
+                tv_home_title.setText(R.string.tv_home_title_contacts);
+                image_home_ic_contacts.setImageResource(R.drawable.image_home_ic_contacts_pressed);
+                tv_home_text_contacts.setTextColor(green);
 //                contacts_layout.setBackgroundResource(R.mipmap.ic_launcher);
                 if (contactsFragment == null) {
                     // 如果contactsFragment为空，则创建一个并添加到界面上
                     contactsFragment = new ContactsFragment();
-                    transaction.add(R.id.content, contactsFragment);
+                    transaction.add(R.id.framelayout_home_content, contactsFragment);
                 } else {
                     // 如果ContactsFragment不为空，则直接将它显示出来
                     transaction.show(contactsFragment);
                 }
                 break;
+            //发现界面
             case 2:
-                home_title.setText("发现");
-                discovery_image.setImageResource(R.drawable.ic_tabbar_discovery_pressed);
-                discovery_text.setTextColor(green);
+                tv_home_title.setText(R.string.tv_home_title_discovery);
+                image_home_ic_discovery.setImageResource(R.drawable.image_home_ic_discovery_pressed);
+                tv_home_text_discovery.setTextColor(green);
 //                discovery_layout.setBackgroundResource(R.mipmap.ic_launcher);
                 if (discoveryFragment == null) {
                     // 如果discoveryFragment为空，则创建一个并添加到界面上
                     discoveryFragment = new DiscoveryFragment();
-                    transaction.add(R.id.content, discoveryFragment);
+                    transaction.add(R.id.framelayout_home_content, discoveryFragment);
                 } else {
                     // 如果DiscoveryFragment不为空，则直接将它显示出来
                     transaction.show(discoveryFragment);
                 }
                 break;
+            //设置界面
             case 3:
-                home_title.setText("设置");
-                setting_image.setImageResource(R.drawable.ic_tabbar_setting_pressed);
-                setting_text.setTextColor(green);
+                tv_home_title.setText(R.string.tv_home_title_setting);
+                image_home_ic_setting.setImageResource(R.drawable.image_home_ic_setting_pressed);
+                tv_home_text_setting.setTextColor(green);
                 if(settingFragment == null){
                     // 如果settingFragment为空，则创建一个并添加到界面上
                     settingFragment = new SettingFragment();
-                    transaction.add(R.id.content,settingFragment);
+                    transaction.add(R.id.framelayout_home_content,settingFragment);
                 }else {
                     // 如果SettingFragment不为空，则直接将它显示出来
                     transaction.show(settingFragment);
@@ -175,20 +178,13 @@ public class HomeActivity extends FragmentActivity implements View.OnClickListen
     //定义一个重置所有选项的方法
     public void clearChioce()
     {
-        message_image.setImageResource(R.drawable.ic_tabbar_message_normal);
-//        message_layout.setBackgroundColor(whirt);
-        message_text.setTextColor(gray);
-        contacts_image.setImageResource(R.drawable.ic_tabbar_contacts_normal);
-//        contacts_layout.setBackgroundColor(whirt);
-        contacts_text.setTextColor(gray);
-        discovery_image.setImageResource(R.drawable.ic_tabbar_discovery_normal);
-//        discovery_layout.setBackgroundColor(whirt);
-        discovery_text.setTextColor(gray);
-        setting_image.setImageResource(R.drawable.ic_tabbar_setting_normal);
-//        discovery_layout.setBackgroundColor(whirt);
-        setting_text.setTextColor(gray);
+        image_home_ic_message.setImageResource(R.drawable.image_home_ic_message_unpressed);
+        tv_home_text_message.setTextColor(gray);
+        image_home_ic_contacts.setImageResource(R.drawable.image_home_ic_contacts_unpressed);
+        tv_home_text_contacts.setTextColor(gray);
+        image_home_ic_discovery.setImageResource(R.drawable.image_home_ic_discovery_unpressed);
+        tv_home_text_discovery.setTextColor(gray);
+        image_home_ic_setting.setImageResource(R.drawable.image_home_ic_setting_unpressed);
+        tv_home_text_setting.setTextColor(gray);
     }
-
-
-
 }

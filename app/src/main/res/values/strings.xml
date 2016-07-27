@@ -63,5 +63,16 @@
     <string name="tv_resetpassword_confirmhint">确认密码</string>
     <string name="btn_resetpassword_save">保存</string>
 
+    <!--HomeActivity-->
+    <string name="tv_home_title_message">消息</string>
+    <string name="tv_home_title_contacts">好友</string>
+    <string name="tv_home_title_discovery">发现</string>
+    <string name="tv_home_title_setting">设置</string>
+    <string name="tv_home_text_message">消息</string>
+    <string name="tv_home_text_contacts">好友</string>
+    <string name="tv_home_text_discovery">发现</string>
+    <string name="tv_home_text_setting">设置</string>
+
+
 
 </resources>
