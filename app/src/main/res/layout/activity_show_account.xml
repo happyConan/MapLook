@@ -10,8 +10,10 @@
         android:layout_height="45dp"
         android:background="#429A8D"
         >
+        <!--注册成功-->
         <TextView
-            android:text="注册成功"
+            android:id="@+id/tv_showaccount_title"
+            android:text="@string/tv_showaccount_title"
             android:textSize="20sp"
             android:textColor="#E57741"
             android:gravity="center"
@@ -20,8 +22,6 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,36 +29,39 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="150dp"
         android:layout_marginBottom="150dp"
-
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+            <!--您的账号为-->
             <TextView
+                android:id="@+id/tv_showaccount_accounthint"
                 android:gravity="center"
                 android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="您的账号为"
+                android:text="@string/tv_showaccount_accounthint"
                 android:textColor="#E57741"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+            <!--524414145-->
             <TextView
+                android:id="@+id/tv_showaccount_account"
                 android:gravity="center"
                 android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="524414145"
+                android:text="@string/tv_showaccount_account"
                 android:textColor="#E57741"/>
         </LinearLayout>
+        <!--返回登录界面-->
         <Button
-            android:id="@+id/btn_back"
-
-            android:text="返回登录界面"
+            android:id="@+id/btn_showaccount_backtologin"
+            android:text="@string/btn_showaccount_backtologin"
             android:textSize="20dp"
             android:textColor="#429A8D"
             android:background="#E57741"

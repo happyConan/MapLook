@@ -27,9 +27,6 @@
         <item>男</item>
         <item>女</item>
     </string-array>
-
-
-
     <string name="tv_register_securequestionhint1">密保问题1</string>
     <string name="tv_register_securequestion1">您的生日是？</string>
     <string name="tv_register_secureanswerhint1">回答</string>
@@ -41,6 +38,12 @@
     <string name="tv_register_pwdhint">密码</string>
     <string name="tv_register_confirmpwdhint">确认密码</string>
     <string name="btn_register_register">注册</string>
+
+    <!--ShowAccountActivity-->
+    <string name="tv_showaccount_title">注册成功</string>
+    <string name="tv_showaccount_accounthint">您的账号为</string>
+    <string name="tv_showaccount_account">524414145</string>
+    <string name="btn_showaccount_backtologin">返回登录界面</string>
 
 
 

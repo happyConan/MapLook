@@ -14,8 +14,8 @@ public class ShowAccountActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_account);
 
-        Button btn_back = (Button)findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(new View.OnClickListener() {
+        Button btn_showaccount_backtologin = (Button)findViewById(R.id.btn_showaccount_backtologin);
+        btn_showaccount_backtologin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
