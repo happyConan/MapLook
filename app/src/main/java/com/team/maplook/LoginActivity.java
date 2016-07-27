@@ -13,10 +13,10 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Button btn_gotoregister = (Button) findViewById(R.id.btn_gotoregister);
-        Button btn_login =(Button)findViewById(R.id.btn_login);
-        Button btn_forgetpwd = (Button) findViewById(R.id.btn_forgetpwd);
-        btn_gotoregister.setOnClickListener(new View.OnClickListener() {
+        Button btn_login_register = (Button) findViewById(R.id.btn_login_register);
+        Button btn_login_login =(Button)findViewById(R.id.btn_login_login);
+        Button btn_login_forgetpwd = (Button) findViewById(R.id.btn_login_forgetpwd);
+        btn_login_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
@@ -24,7 +24,7 @@ public class LoginActivity extends Activity {
                 startActivity(intent);
             }
         });
-        btn_login.setOnClickListener(new View.OnClickListener() {
+        btn_login_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(LoginActivity.this,"正在登陆",Toast.LENGTH_SHORT).show();;
@@ -33,7 +33,7 @@ public class LoginActivity extends Activity {
                 startActivity(intent);
             }
         });
-        btn_forgetpwd.setOnClickListener(new View.OnClickListener() {
+        btn_login_forgetpwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();

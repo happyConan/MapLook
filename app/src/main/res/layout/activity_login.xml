@@ -10,8 +10,10 @@
         android:layout_height="45dp"
         android:background="#429A8D"
         >
+        <!--登录-->
         <TextView
-            android:text="登录"
+            android:id="@+id/tv_login_title"
+            android:text="@string/tv_login_title"
             android:textSize="20sp"
             android:textColor="#E57741"
             android:gravity="center"
@@ -20,9 +22,10 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
     <ImageView
+        android:id="@+id/image_login_hp"
         android:layout_marginTop="35dp"
         android:layout_gravity="center"
-        android:src="@drawable/login_icon"
+        android:src="@drawable/image_login_hp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         ></ImageView>
@@ -41,15 +44,18 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <!--账号-->
         <TextView
+            android:id="@+id/tv_login_account"
             android:textSize="16sp"
-            android:text="账号"
+            android:text="@string/tv_login_account"
             android:paddingEnd="10dp"
             android:textColor="#E57741"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="10dp" />
         <EditText
+            android:id="@+id/et_login_account"
             android:backgroundTint="#E57741"
             android:textColor="#E57741"
             android:layout_width="match_parent"
@@ -65,6 +71,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <!--密码-->
         <TextView
             android:textSize="16sp"
             android:text="密码"
@@ -77,12 +84,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
+                android:id="@+id/btn_login_showpwd"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/login_password"
+                android:background="@drawable/btn_login_showpwd"
                 />
             <EditText
+                android:id="@+id/et_login_pwd"
                 android:backgroundTint="#E57741"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -96,12 +105,12 @@
 
 
 
-
+    <!--登录-->
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_login_login"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:text="登录"
+        android:text="@string/btn_login_login"
         android:textSize="20dp"
         android:textColor="#429A8D"
         android:background="#E57741"
@@ -112,25 +121,26 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+        <!--无账号？点此注册-->
         <Button
-            android:id="@+id/btn_gotoregister"
+            android:id="@+id/btn_login_register"
             android:layout_marginLeft="20dp"
             android:textSize="15sp"
             android:textColor="#429A8D"
             android:layout_gravity="right"
             android:background="#0000"
-            android:text="无账号？点此注册"
+            android:text="@string/btn_login_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <!--忘记密码-->
         <Button
-            android:id="@+id/btn_forgetpwd"
+            android:id="@+id/btn_login_forgetpwd"
             android:layout_marginLeft="130dp"
             android:textSize="15sp"
             android:textColor="#429A8D"
             android:layout_gravity="right"
             android:background="#0000"
-            android:text="忘记密码"
+            android:text="@string/btn_login_fogetpwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>

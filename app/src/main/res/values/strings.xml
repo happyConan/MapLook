@@ -12,4 +12,12 @@
     </string-array>
 
     <string name="tv_load_title">麻蒲路</string>
+
+    <string name="tv_login_title">登录</string>
+    <string name="tv_login_account">账号</string>
+    <string name="tv_login_pwd">密码</string>
+    <string name="btn_login_login">登录</string>
+    <string name="btn_login_register">无账号？点此注册</string>
+    <string name="btn_login_fogetpwd">忘记密码</string>
+
 </resources>
