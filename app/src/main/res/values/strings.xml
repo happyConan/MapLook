@@ -124,5 +124,12 @@
     <string name="tv_strangercard_name">昵称</string>
     <string name="tv_strangercard_description">父母给你的是背景，自己打下来的才叫江山！</string>
     <string name="btn_strangercard_addfriend">添加朋友</string>
+    
+    <!--FriendCardActivity-->
+    <string name="tv_friendcard_title">详细资料</string>
+    <string name="tv_friendcard_gender">男</string>
+    <string name="tv_friendcard_name">z</string>
+    <string name="tv_friendcard_description">(wff)不断正确的认识自己以及持续自我更新另外不要做个自私的人</string>
+    <string name="btn_friendcard_sendmsg">发送消息</string>
 
 </resources>

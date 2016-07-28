@@ -12,7 +12,8 @@
         android:background="#E57741"
         >
         <TextView
-            android:text="详细资料"
+            android:id="@+id/tv_friendcard_title"
+            android:text="@string/tv_friendcard_title"
             android:textSize="20sp"
             android:textColor="#429A8D"
             android:gravity="center"
@@ -36,8 +37,8 @@
                 android:layout_gravity="center"
                 android:paddingLeft="20dp"
                 android:paddingRight="160dp"
-                android:id="@+id/id_p_fcard_icon"
-                android:text="头像"
+                android:id="@+id/tv_friendcard_hphint"
+                android:text="@string/tv_card_hphint"
                 android:textSize="16sp"
                 android:textColor="#598ca1"
                 android:drawableLeft="@drawable/ic_setting_info"
@@ -51,8 +52,8 @@
                 android:gravity="center"
                 android:paddingTop="10dp">
                 <ImageView
-                    android:id="@+id/id_c_fcard_icon"
-                    android:background="@drawable/ic_wg"
+                    android:id="@+id/image_friendcard_hp"
+                    android:background="@drawable/image_friendcard_hp"
                     android:layout_alignParentRight="true"
                     android:layout_centerInParent="true"
                     android:layout_width="80dp"
@@ -66,8 +67,8 @@
             android:layout_height="wrap_content"
             android:background="#ffffff">
             <TextView
-                android:id="@+id/id_p_fcard_name"
-                android:text="昵称"
+                android:id="@+id/tv_friendcard_namehint"
+                android:text="@string/tv_card_namehint"
                 android:paddingLeft="20dp"
                 android:paddingRight="150dp"
                 android:drawableLeft="@drawable/image_card_namehint"
@@ -79,11 +80,10 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/id_c_fcard_name"
-                android:text="向前走，无所畏"
+                android:id="@+id/tv_friendcard_name"
+                android:text="@string/tv_friendcard_name"
                 android:textSize="16sp"
                 android:textColor="#737070"
-
                 android:layout_alignParentRight="true"
                 android:gravity="center"
                 android:layout_width="wrap_content"
@@ -96,8 +96,8 @@
             android:layout_height="wrap_content"
             android:background="#ffffff">
             <TextView
-                android:id="@+id/id_p_fcard_description"
-                android:text="个人说明"
+                android:id="@+id/tv_friendcard_descriptionhint"
+                android:text="@string/tv_card_descriptionhint"
                 android:paddingLeft="20dp"
                 android:textSize="16sp"
                 android:textColor="#598ca1"
@@ -107,8 +107,8 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/id_c_fcard_description"
-                android:text="天天模拟器，不支持Genymotion、超线程的CPU..."
+                android:id="@+id/tv_friendcard_description"
+                android:text="@string/tv_friendcard_description"
                 android:textSize="16sp"
                 android:paddingLeft="180dp"
                 android:textColor="#737070"
@@ -123,14 +123,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Button
-                android:id="@+id/btn_fcard_send"
+                android:id="@+id/btn_friendcard_sendmsg"
                 android:paddingLeft="20dp"
                 android:paddingRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="发送消息                                                     >"
+                android:text="@string/btn_friendcard_sendmsg"
+                android:textAlignment="viewStart"
                 android:textSize="16sp"
-                android:drawableLeft="@drawable/ic_fcard_send"
+                android:drawableLeft="@drawable/btn_friendcard_sendmsg"
                 android:textColor="#E57741"
                 android:background="#429A8D"/>
 
