@@ -73,7 +73,7 @@ android:layout_height="match_parent">
             android:text="@string/tv_card_namehint"
             android:paddingLeft="20dp"
             android:paddingRight="200dp"
-            android:drawableLeft="@drawable/image_card_namehint"
+            android:drawableLeft="@drawable/tv_card_namehint"
             android:textSize="16sp"
             android:textColor="#598ca1"
             android:gravity="center"
@@ -83,6 +83,35 @@ android:layout_height="match_parent">
         <TextView
             android:id="@+id/tv_strangercard_name"
             android:text="@string/tv_strangercard_name"
+            android:textSize="16sp"
+            android:textColor="#737070"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <!--性别-->
+        <TextView
+            android:id="@+id/tv_strangercard_genderhint"
+            android:text="@string/tv_card_genderhint"
+            android:paddingLeft="20dp"
+            android:paddingRight="160dp"
+            android:drawableLeft="@drawable/tv_card_genderhint"
+            android:textSize="16sp"
+            android:textColor="#598ca1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--男-->
+        <TextView
+            android:id="@+id/tv_strangercard_gender"
+            android:text="@string/tv_strangercard_gender"
             android:textSize="16sp"
             android:textColor="#737070"
             android:layout_alignParentRight="true"
@@ -103,7 +132,7 @@ android:layout_height="match_parent">
             android:textSize="16sp"
             android:textColor="#598ca1"
             android:gravity="center"
-            android:drawableLeft="@drawable/image_card_descriptionhint"
+            android:drawableLeft="@drawable/tv_card_descriptionhint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -119,7 +148,7 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content" />
     </RelativeLayout>
     <LinearLayout
-        android:paddingTop="100dp"
+        android:paddingTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
