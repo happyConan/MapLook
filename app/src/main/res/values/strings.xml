@@ -118,4 +118,11 @@
     <string name="btn_handlecard_accept">接受请求</string>
     <string name="btn_handlecard_reject">拒绝请求</string>
 
+    <!--StrangerCardActivity-->
+    <string name="tv_strangercard_title">详细资料</string>
+    <string name="tv_strangercard_gender">男</string>
+    <string name="tv_strangercard_name">昵称</string>
+    <string name="tv_strangercard_description">父母给你的是背景，自己打下来的才叫江山！</string>
+    <string name="btn_strangercard_addfriend">添加朋友</string>
+
 </resources>
