@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_chat_topicture_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#f5f5f5"
+        android:background="#bebebe"
+        android:text="@string/tv_chat_topicture_time"
+        android:layout_gravity="center"
+        />
+    <LinearLayout
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_chat_topicture_name"
+                android:layout_gravity="center"
+                android:text="@string/tv_chat_to_name"
+                android:textSize="16sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tv_chat_to_info">
+
+                <ImageView
+                    android:id="@+id/image_chat_topicture_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_chat_topicture_info"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/image_chat_topicture_hp"
+                android:background="@drawable/image_chat_to_hp"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

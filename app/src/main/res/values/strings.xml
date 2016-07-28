@@ -142,4 +142,23 @@
     <string name="et_alter_pwd">maplook.0512</string>
     <string name="btn_alter_save">保存</string>
 
+    <!--ChatActivity-->
+    <string name="tv_chat_title">z</string>
+
+         <!--共用-->
+    <string name="tv_chat_to_name">你好像很好吃</string>
+    <string name="tv_chat_from_name">z</string>
+
+    <string name="tv_chat_toword_time">2012-12-12 12:12:12</string>
+    <string name="tv_chat_toword_info">啧神经网络真难</string>
+
+    <string name="tv_chat_fromword_time">2012-12-12 12:12:12</string>
+    <string name="tv_chat_fromword_info">嗯</string>
+
+    <string name="tv_chat_topicture_time">2012-12-12 12:12:12</string>
+
+    <string name="tv_chat_frompicture_time">2012-12-12 12:12:12</string>
+
+    <string name="btn_chat_send">发送</string>
+
 </resources>
