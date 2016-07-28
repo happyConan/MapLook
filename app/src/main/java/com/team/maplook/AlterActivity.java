@@ -16,15 +16,15 @@ public class AlterActivity extends Activity {
         setContentView(R.layout.activity_alter);
 
         Button btn_alter_save = (Button)findViewById(R.id.btn_alter_save);
-        final EditText id_c_alter_name = (EditText)findViewById(R.id.id_c_alter_name);
-        final EditText id_c_alter_description = (EditText)findViewById(R.id.id_c_alter_description);
+        final EditText et_alter_name = (EditText)findViewById(R.id.et_alter_name);
+        final EditText et_alter_discription = (EditText)findViewById(R.id.et_alter_discription);
 
         btn_alter_save.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                String alter_name = id_c_alter_name.getText().toString();
-                String alter_description = id_c_alter_description.getText().toString();
+                String alter_name = et_alter_name.getText().toString();
+                String alter_description = et_alter_discription.getText().toString();
 
                 Intent intent_name = new Intent();
                 intent_name.setAction("com.team.maplook");

@@ -132,4 +132,14 @@
     <string name="tv_friendcard_description">(wff)不断正确的认识自己以及持续自我更新另外不要做个自私的人</string>
     <string name="btn_friendcard_sendmsg">发送消息</string>
 
+    <!--AlterActivity-->
+    <string name="tv_alter_title">修改资料</string>
+    <string name="tv_alter_namehint">昵称</string>
+    <string name="et_alter_name">你好像很好吃</string>
+    <string name="tv_alter_discriptionhint">个人说明</string>
+    <string name="et_alter_discription">Now get out of my life</string>
+    <string name="tv_alter_pwdhint">用户密码</string>
+    <string name="et_alter_pwd">maplook.0512</string>
+    <string name="btn_alter_save">保存</string>
+
 </resources>
