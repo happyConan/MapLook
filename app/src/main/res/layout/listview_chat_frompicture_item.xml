@@ -2,7 +2,8 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
 
     <TextView
@@ -18,7 +19,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -39,13 +41,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/tv_chat_frompicture_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/tv_chat_from_name"
-                android:textSize="16sp" />
+            <!--<TextView-->
+                <!--android:id="@+id/tv_chat_frompicture_name"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:text="@string/tv_chat_from_name"-->
+                <!--android:textSize="16sp" />-->
             <FrameLayout
                 android:layout_gravity="right"
                 android:layout_width="wrap_content"
@@ -53,7 +55,7 @@
                 android:background="@drawable/tv_chat_from_info">
 
                 <ImageView
-                    android:id="@+id/image_chat_topicture_info"
+                    android:id="@+id/image_chat_frompicture_info"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:background="@drawable/image_chat_frompicture_info"/>

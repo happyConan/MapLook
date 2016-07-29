@@ -149,15 +149,15 @@
     <string name="tv_chat_to_name">你好像很好吃</string>
     <string name="tv_chat_from_name">z</string>
 
-    <string name="tv_chat_toword_time">2012-12-12 12:12:12</string>
+    <string name="tv_chat_toword_time">16:19</string>
     <string name="tv_chat_toword_info">啧神经网络真难</string>
 
-    <string name="tv_chat_fromword_time">2012-12-12 12:12:12</string>
+    <string name="tv_chat_fromword_time"></string>
     <string name="tv_chat_fromword_info">嗯</string>
 
-    <string name="tv_chat_topicture_time">2012-12-12 12:12:12</string>
+    <string name="tv_chat_topicture_time"></string>
 
-    <string name="tv_chat_frompicture_time">2012-12-12 12:12:12</string>
+    <string name="tv_chat_frompicture_time"></string>
 
     <string name="btn_chat_send">发送</string>
 

@@ -18,20 +18,22 @@
         android:layout_gravity="end"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/tv_chat_toword_name"
-                android:layout_gravity="center"
-                android:text="@string/tv_chat_to_name"
-                android:textSize="16sp"
+            <!--<TextView-->
+                <!--android:id="@+id/tv_chat_toword_name"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:text="@string/tv_chat_to_name"-->
+                <!--android:textSize="16sp"-->
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+
             <TextView
                 android:id="@+id/tv_chat_toword_info"
                 android:text="@string/tv_chat_toword_info"
