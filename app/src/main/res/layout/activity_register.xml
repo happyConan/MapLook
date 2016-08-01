@@ -37,8 +37,38 @@
         android:layout_height="wrap_content"
         android:paddingRight="45dp"
         android:paddingLeft="45dp">
+
         <LinearLayout
-            android:paddingTop="10dp"
+            android:paddingTop="0dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <!--回答-->
+            <TextView
+                android:id="@+id/tv_register_nicknamehint1"
+                android:textSize="16sp"
+                android:text="@string/tv_card_namehint"
+                android:paddingEnd="45dp"
+                android:textColor="#429A8D"
+                android:paddingRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!--例：19950512-->
+            <EditText
+                android:id="@+id/tv_register_nickname1"
+                android:textSize="16sp"
+                android:textColorHint="#429A8D"
+                android:backgroundTint="#429A8D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:paddingTop="0dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -62,7 +92,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:paddingTop="15dp"
+            android:paddingTop="10dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -87,7 +117,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:paddingTop="10dp"
+            android:paddingTop="0dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -140,7 +170,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:paddingTop="10dp"
+            android:paddingTop="0dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -187,6 +217,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ly"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -214,13 +245,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="450dp"
+        android:layout_below="@+id/id_register_info_layout"
         android:paddingLeft="30dp"
         android:paddingRight="30dp">
         <!--注册-->
         <Button
             android:id="@+id/btn_register_register"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="@string/btn_register_register"
             android:textColor="#E57741"
             android:textSize="20dp"

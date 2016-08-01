@@ -2,11 +2,8 @@ package com.team.maplook;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,6 +14,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.team.maplook.databaseUtil.SqliteOperate;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -24,10 +23,9 @@ import java.io.IOException;
 
 public class PersonalCardActivity extends Activity {
 
-    Name_Receiver name_Receiver;
-    Description_Receiver description_Receiver;
     TextView tv_personalcard_name;
     TextView tv_personalcard_description;
+    TextView tv_personalcard_gender;
     ImageView hp;//头像
     private Bitmap head;//头像Bitmap
     private static String path="/sdcard/myHead/";//sd路径
@@ -37,16 +35,28 @@ public class PersonalCardActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_card);
 
+        tv_personalcard_gender=(TextView)findViewById(R.id.tv_personalcard_gender) ;
         hp=(ImageView)findViewById(R.id.id_c_card_icon);
         tv_personalcard_name = (TextView) findViewById(R.id.tv_personalcard_name);
         tv_personalcard_description = (TextView) findViewById(R.id.tv_personalcard_description);
+
+       String[] s=SqliteOperate.QueryDatabase(PersonalCardActivity.this,SqliteOperate.mAccount);
+        Bitmap b=SqliteOperate.QueryBitmap(PersonalCardActivity.this,SqliteOperate.mAccount);
+        hp.setImageBitmap(b);
+        tv_personalcard_name.setText(s[0]);
+        tv_personalcard_gender.setText(s[1]);
+        tv_personalcard_description.setText(s[2]);
+
+
+
+
+
         Button btn_personalcard_alterhp = (Button)findViewById(R.id.btn_personalcard_alterhp);
         Button btn_personalcard_alterinfo = (Button)findViewById(R.id.btn_personalcard_alterinfo);
 
         btn_personalcard_alterhp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //-------尚未实现----------要跳转到修改头像界面：拍照/相册选择
 
                 String title = "选择获取图片方式";
 
@@ -76,7 +86,7 @@ public class PersonalCardActivity extends Activity {
                             }
                         }).show();
 
-
+                SqliteOperate.updateDatabase(PersonalCardActivity.this,SqliteOperate.mAccount,head);
             }
         });
 
@@ -89,42 +99,15 @@ public class PersonalCardActivity extends Activity {
             }
         });
 
-        //动态注册
-        name_Receiver = new Name_Receiver();
-        description_Receiver = new Description_Receiver();
 
-        IntentFilter name_filter = new IntentFilter();
-        name_filter.addAction("com.team.maplook");
-        IntentFilter description_filter = new IntentFilter();
-        description_filter.addAction("com.jiaoda.maplook");
-
-        registerReceiver(name_Receiver,name_filter);
-        registerReceiver(description_Receiver,description_filter);
     }
 
-    //创建 昵称的广播接收器
-    class Name_Receiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent_name) {
-            String name = intent_name.getStringExtra("name");
-            tv_personalcard_name.setText(name);
-        }
-    }
 
-    //创建 个人说明的广播接收器
-    class Description_Receiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent_description) {
-            String description = intent_description.getStringExtra("description");
-            tv_personalcard_description.setText(description);
-        }
-    }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(name_Receiver);
-        unregisterReceiver(description_Receiver);
+
     }
 
 
@@ -158,6 +141,9 @@ public class PersonalCardActivity extends Activity {
                              */
                             setPicToView(head);//保存在SD卡中
                             hp.setImageBitmap(head);//用ImageView显示出来
+
+
+
                         }
                     }
                     break;

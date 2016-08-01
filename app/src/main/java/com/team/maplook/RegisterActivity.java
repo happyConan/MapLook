@@ -6,15 +6,19 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import com.team.maplook.databaseUtil.SqliteOperate;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -26,79 +30,135 @@ public class RegisterActivity extends Activity {
     private ImageView hp;
     private Bitmap head;//头像Bitmap
     private static String path="/sdcard/myHead/";//sd路径
-
+    private EditText password;
+    private EditText birth;
+    private EditText confirmPass;
+    private EditText farName;
+    private EditText nickname;
+    private Spinner gender;
+    private String sex;
+    private Button btn_register_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        head= BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher);
         initView();
 
-        Bitmap bt = BitmapFactory.decodeFile(path + "head.jpg");//从Sd中找头像，转换成Bitmap
-        if(bt!=null){
-            @SuppressWarnings("deprecation")
-            Drawable drawable = new BitmapDrawable(bt);//转换成drawable
-            hp.setImageDrawable(drawable);
-        }else{
-            /**
-             *	如果SD里面没有则需要从服务器取头像，取回来的头像再保存在SD中
-             *
-             */
-        }
 
     }
 
     private void initView() {
         hp=(ImageView)findViewById(R.id.image_register_hp);
-        Button btn_register_register = (Button)findViewById(R.id.btn_register_register);
+        btn_register_register = (Button)findViewById(R.id.btn_register_register);
+        password=(EditText)findViewById(R.id.et_login_pwd);
+        birth=(EditText)findViewById(R.id.tv_register_secureanswer1);
+        confirmPass=(EditText)findViewById(R.id.et_register_confirmpwd);
+        farName=(EditText)findViewById(R.id.tv_register_secureanswer2);
+        nickname=(EditText)findViewById(R.id.tv_register_nickname1);
+        gender=(Spinner)findViewById(R.id.sp_register_gender_array);
+
+
+
+        gender.setOnItemSelectedListener(new Spinner.OnItemSelectedListener()
+        {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sex=parent.getItemAtPosition(position).toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        hp.setOnClickListener(new ImageListener());
         btn_register_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent  = new Intent();
-                intent.setClass(RegisterActivity.this,ShowAccountActivity.class);
-                startActivity(intent);
-                RegisterActivity.this.finish();
+
+                String name=nickname.getText().toString();
+                String pwd=password.getText().toString();
+                String fatherNme=farName.getText().toString();
+                String birthday=birth.getText().toString();
+                String conPwd=confirmPass.getText().toString();
+                String account=(SqliteOperate.getCount(RegisterActivity.this)+1000000)+"";
+
+                if(name.equals("")||pwd.equals("")||fatherNme.equals("")||birthday.equals("")||conPwd.equals(""))
+                {
+                    Toast.makeText(RegisterActivity.this,"请将上述信息填写完整",Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    if(pwd.equals(conPwd)) {
+                    SqliteOperate.InsertDatabase(RegisterActivity.this, account,name, sex, birthday, fatherNme, pwd, head);
+                    Toast.makeText(RegisterActivity.this,"恭喜您注册成功",Toast.LENGTH_SHORT).show();
+                    Intent intent  = new Intent();
+                    intent.setClass(RegisterActivity.this,ShowAccountActivity.class);
+                    intent.putExtra("account",account);
+                    startActivity(intent);
+                    RegisterActivity.this.finish();
+                }
+                else
+                {
+                    Toast.makeText(RegisterActivity.this, "密码输入不一致，请重新输入", Toast.LENGTH_SHORT).show();
+                }
+
+                }
             }
+
+
+
         });
 
 
-        hp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                String title = "选择获取图片方式";
-
-                String[] items = new String[]{"拍照","相册"};
-                new AlertDialog.Builder(RegisterActivity.this)
-                        .setTitle(title)
-                        .setItems(items, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                                switch (i)
-                                {
-                                    case 1:
-                                        Intent intent1 = new Intent(Intent.ACTION_PICK, null);
-                                        intent1.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-                                        startActivityForResult(intent1, 1);
-                                        break;
-                                    case 0:
-                                        Intent intent2 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                                        intent2.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
-                                                "head.jpg")));
-                                        startActivityForResult(intent2, 2);//采用ForResult打开
-                                        break;
-                                    default:break;
-                                }
-
-                            }
-                        }).show();
-            }
-        });
 
 
 
     }
+
+
+    class ImageListener implements View.OnClickListener
+    {
+        @Override
+        public void onClick(View view) {
+            String title = "选择获取图片方式";
+
+            String[] items = new String[]{"拍照","相册"};
+            new AlertDialog.Builder(RegisterActivity.this)
+                    .setTitle(title)
+                    .setItems(items, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                            switch (i)
+                            {
+                                case 1:
+                                    Intent intent1 = new Intent(Intent.ACTION_PICK, null);
+                                    intent1.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+                                    startActivityForResult(intent1, 1);
+                                    break;
+                                case 0:
+                                    Intent intent2 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                                    intent2.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
+                                            "head.jpg")));
+                                    startActivityForResult(intent2, 2);//采用ForResult打开
+                                    break;
+                                default:break;
+                            }
+
+                        }
+                    }).show();
+        }
+    }
+
+
 
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -125,9 +185,7 @@ public class RegisterActivity extends Activity {
                     Bundle extras = data.getExtras();
                     head = extras.getParcelable("data");
                     if (head != null) {
-                        /**
-                         * 上传服务器代码
-                         */
+
                         setPicToView(head);//保存在SD卡中
                         hp.setImageBitmap(head);//用ImageView显示出来
                     }
@@ -140,10 +198,8 @@ public class RegisterActivity extends Activity {
     }
         super.onActivityResult(requestCode, resultCode, data);
     }
-    /**
-     * 调用系统的裁剪
-     * @param uri
-     */
+
+
     public void cropPhoto(Uri uri) {
         Intent intent = new Intent("com.android.camera.action.CROP");
         intent.setDataAndType(uri, "image/*");

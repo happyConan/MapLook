@@ -52,7 +52,7 @@
             <TextView
                 android:id="@+id/tv_showaccount_account"
                 android:gravity="center"
-                android:textSize="16sp"
+                android:textSize="48sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/tv_showaccount_account"
