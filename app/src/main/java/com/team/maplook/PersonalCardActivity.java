@@ -86,8 +86,7 @@ public class PersonalCardActivity extends Activity {
                             }
                         }).show();
 
-                SqliteOperate.updateDatabase(PersonalCardActivity.this,SqliteOperate.mAccount,head);
-            }
+                    }
         });
 
         btn_personalcard_alterinfo.setOnClickListener(new View.OnClickListener() {
@@ -141,6 +140,7 @@ public class PersonalCardActivity extends Activity {
                              */
                             setPicToView(head);//保存在SD卡中
                             hp.setImageBitmap(head);//用ImageView显示出来
+                            SqliteOperate.updateDatabase(PersonalCardActivity.this,SqliteOperate.mAccount,head);
 
 
 
