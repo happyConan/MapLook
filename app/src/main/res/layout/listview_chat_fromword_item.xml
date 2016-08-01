@@ -18,7 +18,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -39,13 +40,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/tv_chat_fromword_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/tv_chat_from_name"
-                android:textSize="16sp" />
+            <!--<TextView-->
+                <!--android:id="@+id/tv_chat_fromword_name"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:text="@string/tv_chat_from_name"-->
+                <!--android:textSize="16sp" />-->
             <TextView
                 android:id="@+id/tv_chat_fromword_info"
                 android:layout_width="wrap_content"
